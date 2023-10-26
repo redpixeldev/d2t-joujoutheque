@@ -6,7 +6,7 @@ module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,ts,tsx}'],
 	theme: {
 		fontFamily: {
-			body: ['', 'sans-serif'],
+			body: ['chillax-variable', 'sans-serif'],
 		},
 
 		container: {
@@ -17,7 +17,17 @@ module.exports = {
 		extend: {
 			colors: {
 				brand: {
-					primary: '',
+					black: '#181818',
+					blue: '#479af6',
+					'blue-light': '#e4f1fe',
+					orange: '#ff7900',
+					green: '#039900',
+					'green-light': '#d8ffc0',
+					'green-bright': '#6cde20',
+					yellow: '#ffe404',
+					'yellow-light': '#fef499',
+					'mustard-light': '#e9d400',
+					red: '#fe452c',
 				},
 			},
 			spacing: {
