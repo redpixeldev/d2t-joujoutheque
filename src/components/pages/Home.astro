@@ -107,7 +107,7 @@
 	</div>
 </div>
 
-<div class="hidden lg:block container lg:px-16 xl:px-32 mb-12 lg:mb-16">
+<div class="hidden lg:block container lg:px-16 xl:px-32 mb-12">
 	<div class="flex gap-16 justify-between">
 		<div class="w-3/4 2xl:w-3/5">
 			<h2 class="text-brand-blue-200 text-[32px]/[48px] font-bold uppercase">Nos <span class="text-brand-green-300">services</span><br />
@@ -150,7 +150,165 @@
 	</div>
 </div>
 
-<div class="container lg:px-16 xl:px-32 mb-16">
+<div class="relative bg-[#faf6f0]">
+	<img src="/img/decor-image.png" class="hidden lg:block absolute inset-x-0 w-[95%] xl:w-5/6 2xl:w-3/4 mx-auto h-auto top-24 object-cover" alt="background decor programmation">
+	<img src="/img/cloud-image.png" class="hidden lg:block absolute inset-x-0 w-full h-auto object-cover bottom-0 object-bottom" alt="cloud image">
+	<div class="container lg:px-16 xl:px-32 pt-12 lg:pt-16 relative z-20 lg:pb-24 xl:pb-36">
+		<div class="text-center">
+			<h2 class="text-[32px]/[48px] font-bold uppercase text-brand-green-300">Programmation</h2>
+			<span class="rounded-full w-2 h-2 bg-brand-blue-100 block mx-auto mb-12"></span>
+		</div>
+		<form class="lg:w-5/6 2xl:w-4/5 mx-auto flex flex-col md:flex-row gap-6 lg:gap-12 pb-6">
+			<div class="w-full">
+				<label for="date" class="font-bold text-brand-gray-500 block pb-1.5">Sélectionner la période</label>
+				<select name="date" id="date" class="border border-brand-gray-75 p-4 rounded-md w-full">
+					<option value="">Septembre 2023 - décembre 2023</option>
+					<option value="">January 2023 - May 2023</option>
+				</select>
+			</div>
+			<div class="w-full">
+				<label for="date" class="font-bold text-brand-gray-500 block pb-1.5">Sélectionner le point de service</label>
+				<select name="date" id="date" class="border border-brand-gray-75 p-4 rounded-md w-full uppercase">
+					<option value="">Quest</option>
+					<option value="">EST MAXI</option>
+					<option value="">EST</option>
+					<option value="">SUD</option>
+				</select>
+			</div>
+		</form>
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+			<div class="w-full pb-5 lg:pb-8">
+				<span class="font-bold block text-brand-gray-500 uppercase bg-brand-green-100 text-2xl py-5 px-8 rounded-[36px] mb-6 md:mb-8">Sorties familiales</span>
+				<div class="border-b border-brand-gray-75">
+					<div class="px-6 md:px-8">
+						<span class="uppercase text-brand-gray-500 font-medium block text-2xl pb-3">Sortie aux pommes</span>
+						<span class="uppercase text-brand-green-300 font-bold block text-sm pb-3">Sortie aux pommes</span>
+						<span class="text-brand-gray-500 block mb-3">
+							En autobus scolaire <br/>
+							Inscription via l’infolettre du 9 septembre <br/>
+							Places limitées
+						</span>
+						<span class="text-white font-bold bg-[#4cba01] py-2 px-4 mb-5 rounded-full inline-block">Inscription</span>
+					</div>
+				</div>
+				<div class="border-b border-brand-gray-75">
+					<div class="px-6 md:px-8">
+						<span class="flex items-center gap-3 text-brand-gray-500 uppercase text-2xl font-medium pt-6 md:pt-8 mb-4">
+							<span>
+								<svg width="30" height="28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m28.893 13.12-2.48-2.827.347-3.746a1.338 1.338 0 0 0-1.027-1.427l-3.68-.84-1.92-3.24a1.329 1.329 0 0 0-1.666-.547L15 2 11.547.52a1.324 1.324 0 0 0-1.667.547L7.947 4.293 4.28 5.12a1.328 1.328 0 0 0-1.04 1.427l.347 3.733-2.48 2.84a1.338 1.338 0 0 0 0 1.76l2.48 2.827-.347 3.76a1.338 1.338 0 0 0 1.027 1.426l3.68.84 1.92 3.227a1.341 1.341 0 0 0 1.68.547L15 26l3.453 1.48a1.324 1.324 0 0 0 1.667-.547l1.92-3.24 3.68-.84a1.326 1.326 0 0 0 1.027-1.426L26.4 17.68l2.48-2.827c.453-.48.453-1.226.013-1.733Zm-12.56 7.547h-2.666V18h2.666v2.667ZM15 15.333c-.733 0-1.333-.6-1.333-1.333V8.667c0-.734.6-1.334 1.333-1.334s1.333.6 1.333 1.334V14c0 .733-.6 1.333-1.333 1.333Z" fill="#4BBA02"/></svg>
+							</span>
+							Fête familiale des saveurs
+						</span>
+						<span class="uppercase text-brand-green-300 font-bold block text-sm pb-3">Sortie aux pommes</span>
+						<span class="text-brand-gray-500 block mb-3">
+							Parc Rene-Goupil
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="w-full pb-5 lg:pb-8">
+				<span class="font-bold block text-brand-gray-500 uppercase bg-brand-blue-75 text-2xl py-5 px-8 rounded-[36px] mb-6 md:mb-8">Programmation ZOOM</span>
+				<div class="border-b border-brand-gray-75">
+					<div class="px-6 md:px-8">
+						<span class="flex items-center gap-3 text-brand-gray-500 uppercase text-2xl font-medium mb-4">
+							<span>
+								<svg width="30" height="28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m28.893 13.12-2.48-2.827.347-3.746a1.338 1.338 0 0 0-1.027-1.427l-3.68-.84-1.92-3.24a1.329 1.329 0 0 0-1.666-.547L15 2 11.547.52a1.324 1.324 0 0 0-1.667.547L7.947 4.293 4.28 5.12a1.328 1.328 0 0 0-1.04 1.427l.347 3.733-2.48 2.84a1.338 1.338 0 0 0 0 1.76l2.48 2.827-.347 3.76a1.338 1.338 0 0 0 1.027 1.426l3.68.84 1.92 3.227a1.341 1.341 0 0 0 1.68.547L15 26l3.453 1.48a1.324 1.324 0 0 0 1.667-.547l1.92-3.24 3.68-.84a1.326 1.326 0 0 0 1.027-1.426L26.4 17.68l2.48-2.827c.453-.48.453-1.226.013-1.733Zm-12.56 7.547h-2.666V18h2.666v2.667ZM15 15.333c-.733 0-1.333-.6-1.333-1.333V8.667c0-.734.6-1.334 1.333-1.334s1.333.6 1.333 1.334V14c0 .733-.6 1.333-1.333 1.333Z" fill="#479af6"/></svg>
+							</span>
+							Conférences Parents
+						</span>
+						<span class="uppercase text-brand-blue-100 font-bold block text-sm pb-3">Mercredi 25 octobre, 19h a 21h</span>
+						<span class="text-brand-gray-500 block mb-3">
+							Epicerie santé, budget serre
+						</span>
+						<span class="text-white font-bold bg-brand-blue-100 py-2 px-4 mb-5 rounded-full inline-block">Inscription</span>
+						<span class="uppercase text-brand-blue-100 font-bold block text-sm pb-3">Mercredi 25 octobre, 19h a 21h</span>
+						<span class="text-brand-gray-500 block mb-3">
+							Sujet a venir
+						</span>
+						<span class="text-white font-bold bg-brand-blue-100 py-2 px-4 mb-5 rounded-full inline-block">Inscription</span>
+					</div>
+				</div>
+				<div class="border-b border-brand-gray-75">
+					<div class="px-8 pt-6 md:pt-8">
+						<span class="text-brand-gray-500 uppercase text-2xl font-medium mb-4 block">
+							Conférences citoyennes
+						</span>
+						<span class="uppercase text-brand-blue-100 font-bold block text-sm pb-3">Mercredi 27 septembre, 19h30 a 21h</span>
+						<span class="text-brand-gray-500 block mb-3">
+							Sujet a venir
+						</span>
+						<span class="uppercase text-brand-blue-100 font-bold block text-sm pb-3">Mercredi 27 septembre, 19h30 a 21h</span>
+						<span class="text-brand-gray-500 block mb-3">
+							Sujet a venir
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="w-full pb-5 lg:pb-8">
+				<span class="font-bold block text-white uppercase bg-brand-orange-100 text-2xl py-5 px-8 rounded-[36px] mb-6 md:mb-8">Sport familial</span>
+				<div class="border-b border-brand-gray-75">
+					<div class="px-6 md:px-8">
+						<span class="flex items-center gap-3 text-brand-gray-500 uppercase text-2xl font-medium mb-4">
+							<span>
+								<svg width="30" height="28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m28.893 13.12-2.48-2.827.347-3.746a1.338 1.338 0 0 0-1.027-1.427l-3.68-.84-1.92-3.24a1.329 1.329 0 0 0-1.666-.547L15 2 11.547.52a1.324 1.324 0 0 0-1.667.547L7.947 4.293 4.28 5.12a1.328 1.328 0 0 0-1.04 1.427l.347 3.733-2.48 2.84a1.338 1.338 0 0 0 0 1.76l2.48 2.827-.347 3.76a1.338 1.338 0 0 0 1.027 1.426l3.68.84 1.92 3.227a1.341 1.341 0 0 0 1.68.547L15 26l3.453 1.48a1.324 1.324 0 0 0 1.667-.547l1.92-3.24 3.68-.84a1.326 1.326 0 0 0 1.027-1.426L26.4 17.68l2.48-2.827c.453-.48.453-1.226.013-1.733Zm-12.56 7.547h-2.666V18h2.666v2.667ZM15 15.333c-.733 0-1.333-.6-1.333-1.333V8.667c0-.734.6-1.334 1.333-1.334s1.333.6 1.333 1.334V14c0 .733-.6 1.333-1.333 1.333Z" fill="#ff7900"/></svg>
+							</span>
+							Ligue de soccer
+						</span>
+						<span class="uppercase text-brand-orange-100 font-bold block text-sm pb-3">Samedi 23 septembre</span>
+						<span class="text-brand-gray-500 block mb-3">
+							Peres enfants 4-12 ans
+						</span>
+					</div>
+				</div>
+				<div class="border-b border-brand-gray-75">
+					<div class="px-8 pt-6 md:pt-8">
+						<span class="text-brand-gray-500 uppercase text-2xl font-medium mb-4 block">
+							Papas champions
+						</span>
+						<span class="uppercase text-brand-orange-100 font-bold block text-sm pb-3">Du 7 octobre au 2 dec</span>
+						<span class="text-brand-gray-500 block mb-3">
+							Samedis 10h a 12h <br />
+							Gymnase de l’ecole Marie-Rivier
+						</span>
+						<span class="uppercase text-brand-orange-100 font-bold block text-sm pb-3">! Important</span>
+						<span class="text-brand-gray-500 block mb-3">
+							Un parent doit jouer sur le terrain!
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="w-full lg:pb-8">
+				<span class="font-bold block text-white uppercase bg-brand-red-75 text-2xl py-5 px-8 rounded-[36px] mb-6 lg:mb-8">Activités parents/enfants</span>
+				<div class="border-b border-brand-gray-75">
+					<div class="px-6 md:px-8">
+						<span class="uppercase text-brand-gray-500 font-medium block text-2xl pb-3">Les Explorateurs : Combo Sortie familiale & soirée Quiz</span>
+						<span class="uppercase text-brand-red-75 font-bold block text-sm pb-3">Mercredi 27 septembre, 19h30 a 21h</span>
+						<span class="text-brand-gray-500 block mb-3">
+							5-12 ans et leurs parents
+						</span>
+					</div>
+				</div>
+				<div class="border-b border-brand-gray-75">
+					<div class="px-6 md:px-8">
+						<span class="flex items-center gap-3 text-brand-gray-500 uppercase text-2xl font-medium pt-6 md:pt-8 mb-4">
+							<span>
+								<svg width="30" height="28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m28.893 13.12-2.48-2.827.347-3.746a1.338 1.338 0 0 0-1.027-1.427l-3.68-.84-1.92-3.24a1.329 1.329 0 0 0-1.666-.547L15 2 11.547.52a1.324 1.324 0 0 0-1.667.547L7.947 4.293 4.28 5.12a1.328 1.328 0 0 0-1.04 1.427l.347 3.733-2.48 2.84a1.338 1.338 0 0 0 0 1.76l2.48 2.827-.347 3.76a1.338 1.338 0 0 0 1.027 1.426l3.68.84 1.92 3.227a1.341 1.341 0 0 0 1.68.547L15 26l3.453 1.48a1.324 1.324 0 0 0 1.667-.547l1.92-3.24 3.68-.84a1.326 1.326 0 0 0 1.027-1.426L26.4 17.68l2.48-2.827c.453-.48.453-1.226.013-1.733Zm-12.56 7.547h-2.666V18h2.666v2.667ZM15 15.333c-.733 0-1.333-.6-1.333-1.333V8.667c0-.734.6-1.334 1.333-1.334s1.333.6 1.333 1.334V14c0 .733-.6 1.333-1.333 1.333Z" fill="#fe452c"/></svg>
+							</span>
+							Planétarium
+						</span>
+						<span class="uppercase text-brand-red-75 font-bold block text-sm pb-3">Samedi 21 octobre</span>
+						<span class="text-brand-gray-500 block mb-3">
+							Places limitees
+						</span>
+						<span class="text-white font-bold bg-brand-red-75 py-2 px-4 mb-5 rounded-full inline-block">Inscription</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container lg:px-16 xl:px-32 mb-16 pt-8 md:pt-12 lg:pt-0">
 	<div class="text-center">
 		<h2 class="text-[32px]/[48px] font-bold uppercase text-brand-yellow-warm">Galerie</h2>
 		<span class="rounded-full w-2 h-2 bg-brand-green-100 block mx-auto mb-12"></span>

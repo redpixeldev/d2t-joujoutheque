@@ -12,6 +12,7 @@
 	[x-cloak] {
 		@apply !hidden;
 	}
+
 }
 
 @layer components {
