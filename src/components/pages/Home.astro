@@ -111,7 +111,9 @@
 						>Les point de service OUEST est ouvert durant l’été.</span
 					>
 				</span>
-				<span class='pt-10 md:pt-6 block font-bold text-brand-orange-100 text-center uppercase text-xs'>Annonce</span>
+				<div class="mt-4 flex flex-col items-center">
+					<span class='pt-10 md:pt-6 block font-bold text-brand-orange-100 text-center uppercase text-xs'>Annonce</span>
+				</div>
 			</div>
 		</div>
 		<div class='relative w-full md:w-[47%] lg:w-[31%]'>
@@ -128,13 +130,11 @@
 						<li class='font-medium'>2 et 9 août</li>
 						<li class='font-medium'>10</li>
 					</ul>
-					<span class='px-3 py-1 inline-block rounded-full text-white bg-brand-blue-200 font-semibold mt-4'
-						>Formation</span
-					>
 				</span>
-				<span class='pt-10 md:pt-6 block font-bold text-brand-blue-200 text-center uppercase text-xs'
-					>Programmation</span
-				>
+				<div class="mt-4 flex flex-col items-center">
+					<span class='px-3 py-1 inline-block rounded-full text-white bg-brand-blue-200 font-semibold'>Formation</span>
+					<span class='pt-10 md:pt-6 block font-bold text-brand-blue-200 text-center uppercase text-xs'>Programmation</span>
+				</div>
 			</div>
 		</div>
 		<div class='relative w-full md:w-[47%] lg:w-[31%]'>
@@ -152,11 +152,11 @@
 						<li class='font-medium'>10h à 12h</li>
 						<li class='font-medium'>Enfants 0-8 ans. et leurs Dorante</li>
 					</ul>
-					<span class='px-3 py-1 inline-block rounded-full text-white bg-brand-green-300 font-semibold mt-4'
-						>Inscription</span
-					>
 				</span>
-				<span class='pt-10 md:pt-6 block font-bold text-brand-green-400 text-center uppercase text-xs'>Evénements</span>
+				<div class="mt-4 flex flex-col items-center">
+					<span class='px-3 py-1 inline-block rounded-full text-white bg-brand-green-300 font-semibold'>Inscription</span>
+					<span class='pt-10 md:pt-6 block font-bold text-brand-green-400 text-center uppercase text-xs'>Evénements</span>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -164,13 +164,23 @@
 
 <div class='relative'>
 	<img
-		src='/img/bg-about.png'
-		class='hidden lg:block absolute inset-x-0 w-full h-full object-cover object-bottom'
-		alt='background about'
+		src='/img/bg-about-decor.png'
+		class='hidden lg:block absolute inset-x-0 xl:w-[95%] 2xl:w-[83%] mx-auto h-auto top-0 -right-10 object-cover z-20'
+		alt='background about decor'
 	/>
-	<div class='container lg:px-16 xl:px-32 relative z-20'>
+	<img
+		src='/img/cloud-blue-about.png'
+		class='hidden lg:block 2xl:hidden absolute inset-x-0 w-full mx-auto h-auto lg:top-[32rem] xl:top-96 2xl:top-64 object-cover z-10'
+		alt='cloud blue about section'
+	/>
+	<img
+		src='/img/cloud-blue-about-wide.png'
+		class='hidden 2xl:block absolute inset-x-0 w-full mx-auto h-auto 2xl:top-[21rem] object-cover z-10'
+		alt='cloud blue wide about section'
+	/>
+	<div class='container lg:px-16 xl:px-32 relative z-30'>
 		<div class='text-center'>
-			<h2 class='text-[32px]/[48px] font-bold uppercase text-brand-blue-100'>
+			<h2 class='text-[32px]/[48px] font-bold uppercase text-brand-blue-100 space-x-2'>
 				<span class='text-brand-yellow-100'>À</span>
 				<span class='text-brand-green-200'>propos</span>
 				<br />
@@ -210,7 +220,7 @@
 	</div>
 </div>
 
-<div class='hidden lg:block container lg:px-16 xl:px-32 mb-12'>
+<div class='hidden lg:block container lg:px-16 xl:px-32 mb-12 relative z-30'>
 	<div class='flex gap-16 justify-between'>
 		<div class='w-3/4 2xl:w-3/5'>
 			<h2 class='text-brand-blue-200 text-[32px]/[48px] font-bold uppercase'>
@@ -400,7 +410,7 @@
 					</div>
 				</div>
 				<div class='border-b border-brand-gray-75'>
-					<div class='px-8 pt-6 md:pt-8'>
+					<div class='px-6 md:px-8 pt-6 md:pt-8'>
 						<span class='text-brand-gray-500 uppercase text-2xl font-medium mb-4 block'> Conférences citoyennes</span>
 						<span class='uppercase text-brand-blue-100 font-bold block text-sm pb-3'
 							>Mercredi 27 septembre, 19h30 a 21h</span
@@ -440,7 +450,7 @@
 					</div>
 				</div>
 				<div class='border-b border-brand-gray-75'>
-					<div class='px-8 pt-6 md:pt-8'>
+					<div class='px-6 md:px-8 pt-6 md:pt-8'>
 						<span class='text-brand-gray-500 uppercase text-2xl font-medium mb-4 block'> Papas champions</span>
 						<span class='uppercase text-brand-orange-100 font-bold block text-sm pb-3'>Du 7 octobre au 2 dec</span>
 						<span class='text-brand-gray-500 block mb-3'>
