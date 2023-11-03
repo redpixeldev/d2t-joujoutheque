@@ -1,144 +1,289 @@
 ---
- const teamMember = [
-    {
-      image: '/img/team-member-photo.png',
-      name: 'Isabelle Tremblay',
-      position: 'Directrice',
-			description: 'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
-    },
-		{
-      image: '/img/team-member-photo.png',
-      name: 'Jeannine Maltais-Dumouchel',
-      position: 'Coordonnatrice des activités',
-			description: 'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
-    },
-		{
-      image: '/img/team-member-photo.png',
-      name: 'Wismy Noster',
-      position: 'Agent de mobilisation et liaison',
-			description: 'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
-    },
-		{
-      image: '/img/team-member-photo.png',
-      name: 'Mariana Infante',
-      position: 'Agente de milieu',
-			description: 'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
-    },
-  ];
-	const directorsBoard = [
-    {
-      name: 'Lise Noël',
-      position: 'Présidente',
-			email: 'lise_noel@youyoutheque.com',
-			description: 'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
-    },
-		{
-      name: 'Valérie Arsenault',
-      position: 'Vice-Présidente',
-			email: 'valerie_arsenault@youyoutheque.com',
-			description: 'Lorem ipsum dolor sit amet consectetur. Elementum nullam augue amet at volutpat commodo et lacus. Morbi netus nibh vitae facilisis eu facilisis. Massa potenti ornare tortor elementum sapien viverra lectus lacinia.',
-    },
-		{
-      name: 'Huong Nguyen',
-      position: 'Secrétaire',
-			email: 'huong_nguyen@youyoutheque.com',
-			description: 'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac massa potenti ornare tortor elementum sapien viverraultrices ullamcorper.',
-    },
-		{
-      name: 'Pascal Blanchette',
-      position: 'Trésorier',
-			email: 'pascal_blanchette@youyoutheque.com',
-			description: 'Elementum nullam augue amet at volutpat commodo et lacus. Morbi netus nibh vitae facilisis eu facilisis. Massa potenti ornare tortor elementum sapien viverra lectus lacinia.',
-    },
-		{
-      name: 'Valérie Beaulieu',
-      position: 'Administratrice',
-			email: 'valerie_beaulieu@youyoutheque.com',
-			description: 'Lorem ipsum dolor sit amet consectetur. Elementum nullam augue amet at volutpat commodo et lacus. Morbi netus nibh vitae facilisis eu facilisis. Massa potenti ornare tortor elementum sapien viverra lectus lacinia.',
-    },
-		{
-      name: 'Dana Galvan',
-      position: 'Administratrice',
-			email: 'dana_galvan@youyoutheque.com',
-			description: 'Elementum nullam augue amet at volutpat commodo et lacus. Morbi netus nibh vitae facilisis eu facilisis. Massa potenti ornare tortor elementum sapien viverra lectus lacinia.',
-    },
-		{
-      name: 'Lucie Makayat',
-      position: 'Administratrice',
-			email: 'lucie_makayat@youyoutheque.com',
-			description: 'Elementum nullam augue amet at volutpat commodo et lacus. Morbi netus nibh vitae facilisis eu facilisis. Massa potenti ornare tortor elementum sapien viverra lectus lacinia.',
-    },
-  ];
+const teamMember = [
+	{
+		image: '/img/team-member-photo.png',
+		name: 'Isabelle Tremblay',
+		position: 'Directrice',
+		description:
+			'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
+	},
+	{
+		image: '/img/team-member-photo.png',
+		name: 'Jeannine Maltais-Dumouchel',
+		position: 'Coordonnatrice des activités',
+		description:
+			'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
+	},
+	{
+		image: '/img/team-member-photo.png',
+		name: 'Wismy Noster',
+		position: 'Agent de mobilisation et liaison',
+		description:
+			'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
+	},
+	{
+		image: '/img/team-member-photo.png',
+		name: 'Mariana Infante',
+		position: 'Agente de milieu',
+		description:
+			'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
+	},
+	{
+		image: '/img/team-member-photo.png',
+		name: 'Fouzia Khomani',
+		position: 'Intervenante en jeux',
+		description:
+			'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
+	},
+	{
+		image: '/img/team-member-photo.png',
+		name: 'Kheira Boutadjine',
+		position: 'Intervenante en jeux',
+		description:
+			'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
+	},
+	{
+		image: '/img/team-member-photo.png',
+		name: 'Andrea Lomando Canete',
+		position: 'Intervenante en jeux',
+		description:
+			'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
+	},
+	{
+		image: '/img/team-member-photo.png',
+		name: 'Diana Saenz',
+		position: 'Intervenante en jeux',
+		description:
+			'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
+	},
+	{
+		image: '/img/team-member-photo.png',
+		name: 'Martha Herrera',
+		position: 'Conseillère à la petite enfance',
+		description:
+			'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
+	},
+	{
+		image: '/img/team-member-photo.png',
+		name: 'Itzia Vargas',
+		position: 'Animatrice Quiz 6-12 ans',
+		description:
+			'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
+	},
+	{
+		image: '/img/team-member-photo.png',
+		name: 'Adrian Solea',
+		position: 'Animatrice Quiz 6-12 ans',
+		description:
+			'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
+	},
+	{
+		image: '/img/team-member-photo.png',
+		name: 'Houda Bencheik',
+		position: 'Commis',
+		description:
+			'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
+	},
+	{
+		image: '/img/team-member-photo.png',
+		name: 'Nawal Hadjbenali',
+		position: 'Commis',
+		description:
+			'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
+	},
+	{
+		image: '/img/team-member-photo.png',
+		name: 'Atifa Makkaoui',
+		position: 'Commis',
+		description:
+			'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
+	},
+	{
+		image: '/img/team-member-photo.png',
+		name: 'Romane Martel',
+		position: 'Commis',
+		description:
+			'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
+	},
+	{
+		image: '/img/team-member-photo.png',
+		name: 'Xochitl Quintana',
+		position: 'Commis',
+		description:
+			'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
+	},
+];
+const directorsBoard = [
+	{
+		name: 'Lise Noël',
+		position: 'Présidente',
+		email: 'lise_noel@youyoutheque.com',
+		description:
+			'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
+	},
+	{
+		name: 'Valérie Arsenault',
+		position: 'Vice-Présidente',
+		email: 'valerie_arsenault@youyoutheque.com',
+		description:
+			'Lorem ipsum dolor sit amet consectetur. Elementum nullam augue amet at volutpat commodo et lacus. Morbi netus nibh vitae facilisis eu facilisis. Massa potenti ornare tortor elementum sapien viverra lectus lacinia.',
+	},
+	{
+		name: 'Huong Nguyen',
+		position: 'Secrétaire',
+		email: 'huong_nguyen@youyoutheque.com',
+		description:
+			'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac massa potenti ornare tortor elementum sapien viverraultrices ullamcorper.',
+	},
+	{
+		name: 'Pascal Blanchette',
+		position: 'Trésorier',
+		email: 'pascal_blanchette@youyoutheque.com',
+		description:
+			'Elementum nullam augue amet at volutpat commodo et lacus. Morbi netus nibh vitae facilisis eu facilisis. Massa potenti ornare tortor elementum sapien viverra lectus lacinia.',
+	},
+	{
+		name: 'Valérie Beaulieu',
+		position: 'Administratrice',
+		email: 'valerie_beaulieu@youyoutheque.com',
+		description:
+			'Lorem ipsum dolor sit amet consectetur. Elementum nullam augue amet at volutpat commodo et lacus. Morbi netus nibh vitae facilisis eu facilisis. Massa potenti ornare tortor elementum sapien viverra lectus lacinia.',
+	},
+	{
+		name: 'Dana Galvan',
+		position: 'Administratrice',
+		email: 'dana_galvan@youyoutheque.com',
+		description:
+			'Elementum nullam augue amet at volutpat commodo et lacus. Morbi netus nibh vitae facilisis eu facilisis. Massa potenti ornare tortor elementum sapien viverra lectus lacinia.',
+	},
+	{
+		name: 'Lucie Makayat',
+		position: 'Administratrice',
+		email: 'lucie_makayat@youyoutheque.com',
+		description:
+			'Elementum nullam augue amet at volutpat commodo et lacus. Morbi netus nibh vitae facilisis eu facilisis. Massa potenti ornare tortor elementum sapien viverra lectus lacinia.',
+	},
+];
 ---
 
-<div class="relative bg-brand-blue-50">
-	<img src="/img/bg-hero-decor.png" class="hidden lg:block absolute inset-x-0 xl:w-[95%] 2xl:w-5/6 mx-auto h-auto top-24 xl:top-10 object-cover z-10" alt="background decor">
-	<img src="/img/bg-hero-decor-contact-mobile.png" class="block lg:hidden absolute inset-x-0 sm:w-2/3 md:w-[45%] ml-auto md:ml-20 h-auto top-0 right-0 object-cover z-10" alt="background decor">
-	<img src="/img/hero-cloud-team-mobile.png" class="block md:hidden absolute inset-x-0 w-full h-auto object-cover top-44 [@media(min-width:530px)_and_(max-width:639px)]:top-24 sm:top-20 md:top-24 z-0" alt="cloud image">
-	<img src="/img/hero-cloud.png" class="hidden md:block absolute inset-x-0 w-full h-auto object-cover object-top bottom-0 z-0" alt="cloud image">
-	<div class="relative z-30 container lg:px-16 xl:px-32 pt-8 md:pt-12 lg:pt-16 pb-10 sm:pb-24 md:pb-44 lg:pb-56 xl:pb-[22rem] 2xl:pb-[26rem] flex flex-col md:flex-row justify-between gap-8 md:gap-0">
-		<div class="md:w-1/2 lg:w-3/5 xl:w-[45%] 2xl:w-2/5">
-			<h1 class="text-brand-blue-100 font-bold text-[32px]/[38px] md:text-[40px]/[48px] 2xl:text-5xl pb-6 uppercase">Équipe</h1>
-			<p class="text-brand-gray-500">Depuis 1998, la Joujouthèque Saint-Michel accueille chaleureusement les tout-petits et leurs parents.
-				Sa mission est de sensibiliser à l’importance du jeu dans le développement de l’enfant et favoriser la relation parent-enfant afin de prévenir ou diminuer les retards de développement.</p>
+<div class='relative bg-brand-blue-50'>
+	<img
+		src='/img/bg-hero-decor.png'
+		class='hidden lg:block absolute inset-x-0 xl:w-[95%] 2xl:w-5/6 mx-auto h-auto top-24 xl:top-10 object-cover z-10'
+		alt='background decor'
+	/>
+	<img
+		src='/img/bg-hero-decor-contact-mobile.png'
+		class='block lg:hidden absolute inset-x-0 sm:w-2/3 md:w-[45%] ml-auto md:ml-20 h-auto top-0 right-0 object-cover z-10'
+		alt='background decor'
+	/>
+	<img
+		src='/img/hero-cloud-team-mobile.png'
+		class='block md:hidden absolute inset-x-0 w-full h-auto object-cover top-44 [@media(min-width:530px)_and_(max-width:639px)]:top-24 sm:top-20 md:top-24 z-0'
+		alt='cloud image'
+	/>
+	<img
+		src='/img/hero-cloud.png'
+		class='hidden md:block absolute inset-x-0 w-full h-auto object-cover object-top bottom-0 z-0'
+		alt='cloud image'
+	/>
+	<div
+		class='relative z-30 container lg:px-16 xl:px-32 pt-8 md:pt-12 lg:pt-16 pb-10 sm:pb-24 md:pb-44 lg:pb-56 xl:pb-[22rem] 2xl:pb-[26rem] flex flex-col md:flex-row justify-between gap-8 md:gap-0'>
+		<div class='md:w-1/2 lg:w-3/5 xl:w-[45%] 2xl:w-2/5'>
+			<h1 class='text-brand-blue-100 font-bold text-[32px]/[38px] md:text-[40px]/[48px] 2xl:text-5xl pb-6 uppercase'>
+				Équipe
+			</h1>
+			<p class='text-brand-gray-500'>
+				Depuis 1998, la Joujouthèque Saint-Michel accueille chaleureusement les tout-petits et leurs parents. Sa mission
+				est de sensibiliser à l’importance du jeu dans le développement de l’enfant et favoriser la relation
+				parent-enfant afin de prévenir ou diminuer les retards de développement.
+			</p>
 		</div>
-		<div class="relative md:w-1/2 mx-auto md:mx-0">
-			<img src="/img/team-hero-01.png" class="md:absolute -top-7 right-0 h-52 xl:h-60" alt="team image hero">
-			<img src="/img/team-hero-02.png" class="md:absolute top-32 xl:top-40 right-28 lg:right-48 h-40 xl:h-48" alt="team image hero">
+		<div class='relative md:w-1/2 mx-auto md:mx-0'>
+			<img
+				src='/img/team-hero-01.png'
+				class='md:absolute -top-7 right-0 h-52 xl:h-60'
+				alt='team image hero'
+			/>
+			<img
+				src='/img/team-hero-02.png'
+				class='md:absolute top-32 xl:top-40 right-28 lg:right-48 h-40 xl:h-48'
+				alt='team image hero'
+			/>
 		</div>
 	</div>
 </div>
 
-<div class="container lg:px-16 xl:px-32 pt-11 md:pt-0 pb-14">
+<div class='container lg:px-16 xl:px-32 pt-11 md:pt-0 pb-14'>
 	<div class='text-center'>
 		<h2 class='text-[32px]/[48px] font-bold uppercase text-brand-blue-100 space-x-2'>
-			<span class='text-[#4BBA02]'>Équipe </span>
+			<span class='text-[#4BBA02]'>Équipe</span>
 			<span class='text-brand-orange-100'>de</span>
 			<span class='text-brand-blue-100'>travail</span>
 		</h2>
 		<span class='rounded-full w-2 h-2 bg-brand-orange-100 block mx-auto mb-8 lg:mb-12'></span>
 	</div>
-	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
-		{teamMember.map((item, index) => {
-			return (
-				<div class="text-center">
-					<span class="block w-36 2xl:w-44 mx-auto">
-						<img src={item.image} class="" alt={item.name}>
-					</span>
-					<span class="block mt-4 font-bold text-brand-blue-100 uppercase">{item.name}</span>
-					<span class="block mt-4">{item.position}</span>
-					<p class="mt-4 text-sm/[20px]">{item.description}</p>
-				</div>
-			);
-    })}
-		<button class="mx-auto inline-block sm:hidden uppercase text-sm font-medium text-brand-gray-100 border border-brand-gray-100 rounded-full px-4 py-1">Voir Plus</button>
+	<div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8'>
+		{
+			teamMember.map((item, index) => {
+				return (
+					<div class='text-center'>
+						<span class='block w-36 2xl:w-44 mx-auto'>
+							<img
+								src={item.image}
+								class=''
+								alt={item.name}
+							/>
+						</span>
+						<span class='block mt-4 font-bold text-brand-blue-100 uppercase'>{item.name}</span>
+						<span class='block mt-4'>{item.position}</span>
+						<p class='mt-4 text-sm/[20px]'>{item.description}</p>
+					</div>
+				);
+			})
+		}
+		<button
+			class='mx-auto inline-block sm:hidden uppercase text-sm font-medium text-brand-gray-100 border border-brand-gray-100 rounded-full px-4 py-1'
+			>Voir Plus</button
+		>
 	</div>
 </div>
 
-<div class="container lg:px-16 xl:px-32">
+<div class='container lg:px-16 xl:px-32'>
 	<div class='text-center'>
 		<h2 class='text-[32px]/[48px] font-bold uppercase text-brand-blue-100 space-x-2'>
-			<span class='text-[#4BBA02]'>Conseil </span>
-			<span class='text-brand-blue-100'>d’administration</span>
-			<span class="inline-flex">
+			<span class='text-[#4BBA02]'>Conseil</span>
+			<span class='text-brand-blue-100 break-words'>d’administration</span>
+			<span class='inline-flex'>
 				<span class='text-brand-orange-100'>2022</span>
-				<span class="text-[#AAD3FF]">-</span>
-				<span class="text-[#EAD400]">2023</span>
+				<span class='text-[#AAD3FF]'>-</span>
+				<span class='text-[#EAD400]'>2023</span>
 			</span>
 		</h2>
 		<span class='rounded-full w-2 h-2 bg-brand-orange-100 block mx-auto mb-8 lg:mb-12'></span>
 	</div>
-	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-7 md:gap-8">
-		{directorsBoard.map((item, index) => {
-			return (
-				<div class="text-center">
-					<span class="inline-block mt-4 font-bold text-brand-blue-100 uppercase py-1 px-3 bg-[#E4F1FF] rounded-full">{item.name}</span>
-					<span class="block mt-4">{item.position}</span>
-					<a href="mailto:{item.email}" class="text-brand-blue-100 underline text-sm break-words block mt-4">{item.email}</a>
-					<p class="mt-4 text-sm/[20px]">{item.description}</p>
-				</div>
-			);
-    })}
-		<button class="mx-auto inline-block sm:hidden uppercase text-sm font-medium text-brand-gray-100 border border-brand-gray-100 rounded-full px-4 py-1">Voir Plus</button>
+	<div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-7 md:gap-8'>
+		{
+			directorsBoard.map((item, index) => {
+				return (
+					<div class='text-center'>
+						<span class='inline-block mt-4 font-bold text-brand-blue-100 uppercase py-1 px-3 bg-[#E4F1FF] rounded-full'>
+							{item.name}
+						</span>
+						<span class='block mt-4'>{item.position}</span>
+						<a
+							href='mailto:{item.email}'
+							class='text-brand-blue-100 underline text-sm break-words block mt-4'>
+							{item.email}
+						</a>
+						<p class='mt-4 text-sm/[20px]'>{item.description}</p>
+					</div>
+				);
+			})
+		}
+		<button
+			class='mx-auto inline-block sm:hidden uppercase text-sm font-medium text-brand-gray-100 border border-brand-gray-100 rounded-full px-4 py-1'
+			>Voir Plus</button
+		>
 	</div>
 </div>
