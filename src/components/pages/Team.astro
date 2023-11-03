@@ -1,0 +1,55 @@
+---
+ const teamMember = [
+    {
+      image: '/img/team-member-photo.png',
+      name: 'Isabelle Tremblay',
+      position: 'Directrice',
+			description: 'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
+    },
+		{
+      image: '/img/team-member-photo.png',
+      name: 'Isabelle Tremblay',
+      position: 'Directrice',
+			description: 'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
+    },
+  ];
+---
+
+<div class="relative bg-brand-blue-50">
+	<img src="/img/bg-hero-decor.png" class="hidden lg:block absolute inset-x-0 xl:w-[95%] 2xl:w-5/6 mx-auto h-auto top-24 xl:top-10 object-cover z-10" alt="background decor">
+	<img src="/img/bg-hero-decor-contact-mobile.png" class="block lg:hidden absolute inset-x-0 sm:w-2/3 md:w-[45%] ml-auto md:ml-20 h-auto top-0 right-0 object-cover z-10" alt="background decor">
+	<img src="/img/hero-cloud-team-mobile.png" class="block lg:hidden absolute inset-x-0 w-full h-auto object-cover top-44 [@media(min-width:530px)_and_(max-width:639px)]:top-24 sm:top-20 md:top-24 z-0" alt="cloud image">
+	<img src="/img/hero-cloud.png" class="hidden md:block absolute inset-x-0 w-full h-auto object-cover object-top bottom-0 z-0" alt="cloud image">
+	<div class="relative z-30 container lg:px-16 xl:px-32 pt-8 md:pt-12 lg:pt-16 pb-10 sm:pb-24 md:pb-44 lg:pb-56 xl:pb-[22rem] 2xl:pb-[26rem] flex flex-col md:flex-row justify-between gap-8 md:gap-0">
+		<div class="md:w-1/2 lg:w-3/5 xl:w-[45%] 2xl:w-2/5">
+			<h1 class="text-brand-blue-100 font-bold text-[32px]/[38px] md:text-[40px]/[48px] 2xl:text-5xl pb-6 uppercase">Équipe</h1>
+			<p class="text-brand-gray-500">Depuis 1998, la Joujouthèque Saint-Michel accueille chaleureusement les tout-petits et leurs parents.
+				Sa mission est de sensibiliser à l’importance du jeu dans le développement de l’enfant et favoriser la relation parent-enfant afin de prévenir ou diminuer les retards de développement.</p>
+		</div>
+		<div class="relative md:w-1/2 mx-auto md:mx-0">
+			<img src="/img/team-hero-01.png" class="md:absolute -top-7 right-0 h-52 xl:h-60" alt="team image hero">
+			<img src="/img/team-hero-02.png" class="md:absolute top-32 xl:top-40 right-28 lg:right-48 h-40 xl:h-48" alt="team image hero">
+		</div>
+	</div>
+</div>
+
+<div class="container lg:px-16 xl:px-32">
+	<div class='text-center'>
+		<h2 class='text-[32px]/[48px] font-bold uppercase text-brand-blue-100 space-x-2'>
+			<span class='text-[#4BBA02]'>Équipe </span>
+			<span class='text-brand-orange-100'>de</span>
+			<span class='text-brand-blue-100'>travail</span>
+		</h2>
+		<span class='rounded-full w-2 h-2 bg-brand-orange-100 block mx-auto mb-8 lg:mb-12'></span>
+	</div>
+	<div class="grid grid-cols-4">
+		{teamMember.map((item, index) => {
+			return (
+				<div>
+					<span>
+						<img src={item.image} class="" alt=""></span>
+				</div>
+			);
+    })}
+	</div>
+</div>
