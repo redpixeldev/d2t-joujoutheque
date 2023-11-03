@@ -1,205 +1,242 @@
-<div class='bg-white relative z-50'>
-	<div class='container lg:px-16 xl:px-32 py-4'>
-		<div class='flex flex-col sm:flex-row justify-between items-center lg:pb-4 w-full'>
-			<a
-				href='/'
-				class='sm:mr-16 md:mr-32 lg:mr-0 block shrink-0'>
-				<img
-					src='/img/logo-joujoutheque.png'
-					class='h-16'
-					alt='logo'
-				/>
-			</a>
-			<div class='flex flex-row-reverse sm:flex-row items-center justify-between lg:justify-end w-full pt-8 sm:pt-0'>
+<div
+	x-data="{
+	isMobileOpen: false,
+	toggleMobileMenu() {
+		this.isMobileOpen = !this.isMobileOpen
+		document.body.classList.toggle('overflow-hidden')
+	}
+}">
+	<div class='bg-white relative z-50'>
+		<div class='container lg:px-16 xl:px-32 py-4'>
+			<div class='flex flex-col sm:flex-row justify-between items-center lg:pb-4 w-full'>
 				<a
 					href='/'
-					class='font-semibold text-[#2C76C8] uppercase text-sm rounded-full border border-[#2C76C8] py-1.5 pl-4 pr-5 flex gap-2'>
+					class='sm:mr-16 md:mr-32 lg:mr-0 block shrink-0'>
 					<img
-						src='/img/icon-user.svg'
-						alt='icon user'
+						src='/img/logo-joujoutheque.png'
+						class='h-16'
+						alt='logo'
 					/>
-					 Connexion
 				</a>
-				<button class='block lg:hidden'>
-					<svg
-						xmlns='http://www.w3.org/2000/svg'
-						fill='none'
-						viewBox='0 0 24 24'
-						stroke-width='1.5'
-						stroke='currentColor'
-						class='w-10 h-10'>
-						<path
-							stroke-linecap='round'
-							stroke-linejoin='round'
-							d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
-						></path>
-					</svg>
-				</button>
-				<!-- X BUTTON
-				<span>
-					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
-						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-					</svg>
-				</span>
-			-->
-			</div>
-		</div>
-		<ul class='lg:flex gap-10 pl-4 hidden'>
-			<li>
-				<a
-					href='/'
-					class=''
-					>Qui sommes-nous?</a
-				>
-			</li>
-			<li>
-				<a
-					href='/'
-					class=''
-					>Programmation</a
-				>
-			</li>
-			<li>
-				<a
-					href='/'
-					class=''
-					>Fiches-jeux</a
-				>
-			</li>
-			<li>
-				<a
-					href='/'
-					class=''
-					>Photos</a
-				>
-			</li>
-			<li>
-				<a
-					href='/'
-					class=''
-					>Ressources</a
-				>
-			</li>
-			<li>
-				<a
-					href='/'
-					class=''
-					>Don</a
-				>
-			</li>
-			<li>
-				<a
-					href='/'
-					class=''
-					>Contact</a
-				>
-			</li>
-		</ul>
-	</div>
-</div>
-<div class='shadow-[3px_3px_30px_rgba(15,17,35,0.15)] hidden'>
-	<div class='space-y-3'>
-		<ul>
-			<li class='py-3 hover:bg-brand-blue-50 hover:font-bold pl-8 pr-6'>
-				<a
-					href='/'
-					class='text-brand-gray-200'
-					>Qui sommes-nous?</a
-				>
-			</li>
-			<ul class='bg-brand-blue-50'>
-				<li class='hover:bg-brand-blue-75 py-2 pl-12 pr-6 hover:font-bold'>
+				<div
+					class='flex flex-row-reverse sm:flex-row items-center justify-between md:justify-end w-full pt-8 sm:pt-0 gap-8'>
 					<a
 						href='/'
-						class='text-brand-gray-200'
-						>Notre mission</a
-					>
-				</li>
-				<li class='hover:bg-brand-blue-75 py-2 pl-12 pr-6 hover:font-bold'>
-					<a
-						href='/'
-						class='text-brand-gray-200'
-						>Objectifs, valeurs et principes..
+						class='font-semibold text-[#2C76C8] uppercase text-sm rounded-full border border-[#2C76C8] py-1.5 pl-4 pr-5 flex gap-2'>
+						<img
+							src='/img/icon-user.svg'
+							alt='icon user'
+						/>
+						 Connexion
 					</a>
-				</li>
-				<li class='hover:bg-brand-blue-75 py-2 pl-12 pr-6 hover:font-bold'>
+					<button
+						class='block lg:hidden'
+						@click='toggleMobileMenu'
+						x-show='!isMobileOpen'>
+						<svg
+							xmlns='http://www.w3.org/2000/svg'
+							fill='none'
+							viewBox='0 0 24 24'
+							stroke-width='1.5'
+							stroke='currentColor'
+							class='w-10 h-10'>
+							<path
+								stroke-linecap='round'
+								stroke-linejoin='round'
+								d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
+							></path>
+						</svg>
+					</button>
+					<button
+						x-show='isMobileOpen'
+						@click='toggleMobileMenu'
+						x-cloak>
+						<svg
+							xmlns='http://www.w3.org/2000/svg'
+							fill='none'
+							viewBox='0 0 24 24'
+							stroke-width='1.5'
+							stroke='currentColor'
+							class='w-10 h-10'>
+							<path
+								stroke-linecap='round'
+								stroke-linejoin='round'
+								d='M6 18L18 6M6 6l12 12'
+							></path>
+						</svg>
+					</button>
+				</div>
+			</div>
+			<ul class='lg:flex gap-10 pl-4 hidden'>
+				<li>
 					<a
 						href='/'
-						class='text-brand-gray-200'
-						>Devenir membre</a
+						class=''
+						>Qui sommes-nous?</a
 					>
 				</li>
-				<li class='hover:bg-brand-blue-75 py-2 pl-12 pr-6 hover:font-bold'>
+				<li>
 					<a
 						href='/'
-						class='text-brand-gray-200'
-						>Équipe</a
+						class=''
+						>Programmation</a
 					>
 				</li>
-				<li class='hover:bg-brand-blue-75 py-2 pl-12 pr-6 hover:font-bold'>
+				<li>
 					<a
 						href='/'
-						class='text-brand-gray-200'
-						>Publications</a
+						class=''
+						>Fiches-jeux</a
 					>
 				</li>
-				<li class='hover:bg-brand-blue-75 py-2 pl-12 pr-6 hover:font-bold'>
+				<li>
 					<a
 						href='/'
-						class='text-brand-gray-200'
-						>Partenaires financiers</a
+						class=''
+						>Photos</a
 					>
 				</li>
-				<li class='hover:bg-brand-blue-75 py-2 pl-12 pr-6 hover:font-bold'>
+				<li>
 					<a
 						href='/'
-						class='text-brand-gray-200'
-						>Partenaires d’action</a
+						class=''
+						>Ressources</a
+					>
+				</li>
+				<li>
+					<a
+						href='/'
+						class=''
+						>Don</a
+					>
+				</li>
+				<li>
+					<a
+						href='/'
+						class=''
+						>Contact</a
 					>
 				</li>
 			</ul>
-			<li class='py-2.5 hover:font-bold hover:bg-brand-blue-50 pl-8 pr-6'>
-				<a
-					href='/'
-					class='text-brand-gray-200'
-					>Programmation</a
-				>
-			</li>
-			<li class='py-2.5 hover:font-bold hover:bg-brand-blue-50 pl-8 pr-6'>
-				<a
-					href='/'
-					class='text-brand-gray-200'
-					>Fiches-jeux</a
-				>
-			</li>
-			<li class='py-2.5 hover:font-bold hover:bg-brand-blue-50 pl-8 pr-6'>
-				<a
-					href='/'
-					class='text-brand-gray-200'
-					>Photos</a
-				>
-			</li>
-			<li class='py-2.5 hover:font-bold hover:bg-brand-blue-50 pl-8 pr-6'>
-				<a
-					href='/'
-					class='text-brand-gray-200'
-					>Ressources</a
-				>
-			</li>
-			<li class='py-2.5 hover:font-bold hover:bg-brand-blue-50 pl-8 pr-6'>
-				<a
-					href='/'
-					class='text-brand-gray-200'
-					>Don</a
-				>
-			</li>
-			<li class='py-2.5 hover:font-bold hover:bg-brand-blue-50 pl-8 pr-6'>
-				<a
-					href='/'
-					class='text-brand-gray-200'
-					>Contact</a
-				>
-			</li>
-		</ul>
+		</div>
+	</div>
+	<div
+		class='shadow-[3px_3px_30px_rgba(15,17,35,0.15)] absolute bg-white z-50 w-full'
+		x-show='isMobileOpen'
+		x-collapse>
+		<div class='space-y-3'>
+			<ul>
+				<li
+					class=''
+					x-data='{
+					expanded: false,
+				}'>
+					<button
+						class='text-brand-gray-200 pl-8 pr-6 py-3 block w-full text-left'
+						@click='expanded = !expanded'
+						:class="{
+							'bg-brand-blue-50 font-bold': expanded,
+						}">
+						Qui sommes-nous?
+					</button>
+					<ul
+						class='bg-brand-blue-50'
+						x-show='expanded'
+						x-collapse>
+						<li class='hover:bg-brand-blue-75 py-2 pl-12 pr-6 hover:font-bold'>
+							<a
+								href='/'
+								class='text-brand-gray-200'
+								>Notre mission</a
+							>
+						</li>
+						<li class='hover:bg-brand-blue-75 py-2 pl-12 pr-6 hover:font-bold'>
+							<a
+								href='/'
+								class='text-brand-gray-200'
+								>Objectifs, valeurs et principes..
+							</a>
+						</li>
+						<li class='hover:bg-brand-blue-75 py-2 pl-12 pr-6 hover:font-bold'>
+							<a
+								href='/'
+								class='text-brand-gray-200'
+								>Devenir membre</a
+							>
+						</li>
+						<li class='hover:bg-brand-blue-75 py-2 pl-12 pr-6 hover:font-bold'>
+							<a
+								href='/'
+								class='text-brand-gray-200'
+								>Équipe</a
+							>
+						</li>
+						<li class='hover:bg-brand-blue-75 py-2 pl-12 pr-6 hover:font-bold'>
+							<a
+								href='/'
+								class='text-brand-gray-200'
+								>Publications</a
+							>
+						</li>
+						<li class='hover:bg-brand-blue-75 py-2 pl-12 pr-6 hover:font-bold'>
+							<a
+								href='/'
+								class='text-brand-gray-200'
+								>Partenaires financiers</a
+							>
+						</li>
+						<li class='hover:bg-brand-blue-75 py-2 pl-12 pr-6 hover:font-bold'>
+							<a
+								href='/'
+								class='text-brand-gray-200'
+								>Partenaires d’action</a
+							>
+						</li>
+					</ul>
+				</li>
+				<li class='py-2.5 hover:font-bold hover:bg-brand-blue-50 pl-8 pr-6'>
+					<a
+						href='/'
+						class='text-brand-gray-200'
+						>Programmation</a
+					>
+				</li>
+				<li class='py-2.5 hover:font-bold hover:bg-brand-blue-50 pl-8 pr-6'>
+					<a
+						href='/'
+						class='text-brand-gray-200'
+						>Fiches-jeux</a
+					>
+				</li>
+				<li class='py-2.5 hover:font-bold hover:bg-brand-blue-50 pl-8 pr-6'>
+					<a
+						href='/'
+						class='text-brand-gray-200'
+						>Photos</a
+					>
+				</li>
+				<li class='py-2.5 hover:font-bold hover:bg-brand-blue-50 pl-8 pr-6'>
+					<a
+						href='/'
+						class='text-brand-gray-200'
+						>Ressources</a
+					>
+				</li>
+				<li class='py-2.5 hover:font-bold hover:bg-brand-blue-50 pl-8 pr-6'>
+					<a
+						href='/'
+						class='text-brand-gray-200'
+						>Don</a
+					>
+				</li>
+				<li class='py-2.5 hover:font-bold hover:bg-brand-blue-50 pl-8 pr-6'>
+					<a
+						href='/'
+						class='text-brand-gray-200'
+						>Contact</a
+					>
+				</li>
+			</ul>
+		</div>
 	</div>
 </div>

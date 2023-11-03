@@ -4,7 +4,7 @@ import '../styles/main.css';
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang='en'>
 	<head>
 		<meta charset='UTF-8' />
@@ -27,8 +27,27 @@ const { title } = Astro.props;
 			sizes='32x32'
 			href='/favicon-32x32.png'
 		/>
+
+		<link
+			rel='stylesheet'
+			href='https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css'
+		/>
+
+		<script src='https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js'></script>
+
+		<!-- Alpine Plugins -->
+		<script
+			defer
+			src='https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js'
+		></script>
+
+		<!-- Alpine Core -->
+		<script
+			defer
+			src='https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js'
+		></script>
 	</head>
-	<body class="max-w-[1920px] mx-auto">
+	<body class='max-w-[1920px] mx-auto'>
 		<slot />
 	</body>
 </html>

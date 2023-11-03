@@ -111,7 +111,7 @@
 						>Les point de service OUEST est ouvert durant l’été.</span
 					>
 				</span>
-				<div class="mt-4 flex flex-col items-center">
+				<div class='mt-4 flex flex-col items-center'>
 					<span class='pt-10 md:pt-6 block font-bold text-brand-orange-100 text-center uppercase text-xs'>Annonce</span>
 				</div>
 			</div>
@@ -131,9 +131,11 @@
 						<li class='font-medium'>10</li>
 					</ul>
 				</span>
-				<div class="mt-4 flex flex-col items-center">
+				<div class='mt-4 flex flex-col items-center'>
 					<span class='px-3 py-1 inline-block rounded-full text-white bg-brand-blue-200 font-semibold'>Formation</span>
-					<span class='pt-10 md:pt-6 block font-bold text-brand-blue-200 text-center uppercase text-xs'>Programmation</span>
+					<span class='pt-10 md:pt-6 block font-bold text-brand-blue-200 text-center uppercase text-xs'
+						>Programmation</span
+					>
 				</div>
 			</div>
 		</div>
@@ -153,9 +155,13 @@
 						<li class='font-medium'>Enfants 0-8 ans. et leurs Dorante</li>
 					</ul>
 				</span>
-				<div class="mt-4 flex flex-col items-center">
-					<span class='px-3 py-1 inline-block rounded-full text-white bg-brand-green-300 font-semibold'>Inscription</span>
-					<span class='pt-10 md:pt-6 block font-bold text-brand-green-400 text-center uppercase text-xs'>Evénements</span>
+				<div class='mt-4 flex flex-col items-center'>
+					<span class='px-3 py-1 inline-block rounded-full text-white bg-brand-green-300 font-semibold'
+						>Inscription</span
+					>
+					<span class='pt-10 md:pt-6 block font-bold text-brand-green-400 text-center uppercase text-xs'
+						>Evénements</span
+					>
 				</div>
 			</div>
 		</div>
@@ -512,59 +518,159 @@
 		<h2 class='text-[32px]/[48px] font-bold uppercase text-brand-yellow-warm'>Galerie</h2>
 		<span class='rounded-full w-2 h-2 bg-brand-green-100 block mx-auto mb-12'></span>
 	</div>
-	<div class='block md:hidden'>
-		<span>
-			<img
-				src='/img/gallery-01.jpg'
-				class='rounded-[16px] w-full h-full'
-				alt='gallery image'
-			/>
-		</span>
-		<div class='mt-8 flex items-center gap-4'>
-			<span>
-				<svg
-					xmlns='http://www.w3.org/2000/svg'
-					fill='none'
-					viewBox='0 0 24 24'
-					stroke-width='1.5'
-					stroke='currentColor'
-					class='w-8 h-8'>
-					<path
-						stroke-linecap='round'
-						stroke-linejoin='round'
-						d='M15.75 19.5L8.25 12l7.5-7.5'
-					></path>
-				</svg>
-			</span>
-			<span>
-				<img
-					src='/img/gallery-03.jpg'
-					class='rounded-[8px] w-full h-full'
-					alt='gallery image'
-				/>
-			</span>
-			<span>
-				<img
-					src='/img/gallery-04.jpg'
-					class='rounded-[8px] w-full h-full'
-					alt='gallery image'
-				/>
-			</span>
-			<span>
-				<svg
-					xmlns='http://www.w3.org/2000/svg'
-					fill='none'
-					viewBox='0 0 24 24'
-					stroke-width='1.5'
-					stroke='currentColor'
-					class='w-8 h-8'>
-					<path
-						stroke-linecap='round'
-						stroke-linejoin='round'
-						d='M8.25 4.5l7.5 7.5-7.5 7.5'
-					></path>
-				</svg>
-			</span>
+	<div
+		class='block md:hidden'
+		x-data="{
+		init() {
+			document.addEventListener('DOMContentLoaded', (event) => {
+				const thumbnails = new Splide(this.$refs.galleryThumbnails, {
+					perPage: 2,
+					gap: '1rem',
+					isNavigation: true,
+				}).mount()
+
+				const main = new Splide(this.$refs.galleryMain, {
+					perPage: 1,
+					arrows: false
+				}).mount()
+
+				main.sync( thumbnails );
+				main.mount();
+				thumbnails.mount();
+			})
+		},
+	}">
+		<div
+			x-ref='galleryMain'
+			class='splide mx-auto'>
+			<div class='splide__track'>
+				<ul class='splide__list'>
+					<li class='splide__slide'>
+						<img
+							src='/img/gallery-01.jpg'
+							class='rounded-[16px] w-full h-full block'
+							alt='gallery image'
+						/>
+					</li>
+					<li class='splide__slide'>
+						<img
+							src='/img/gallery-02.jpg'
+							class='rounded-[16px] w-full h-full block'
+							alt='gallery image'
+						/>
+					</li>
+					<li class='splide__slide'>
+						<img
+							src='/img/gallery-03.jpg'
+							class='rounded-[16px] w-full h-full block'
+							alt='gallery image'
+						/>
+					</li>
+					<li class='splide__slide'>
+						<img
+							src='/img/gallery-04.jpg'
+							class='rounded-[16px] w-full h-full block'
+							alt='gallery image'
+						/>
+					</li>
+					<li class='splide__slide'>
+						<img
+							src='/img/gallery-05.jpg'
+							class='rounded-[16px] w-full h-full block'
+							alt='gallery image'
+						/>
+					</li>
+					<li class='splide__slide'>
+						<img
+							src='/img/gallery-06.jpg'
+							class='rounded-[16px] w-full h-full block'
+							alt='gallery image'
+						/>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div
+			x-ref='galleryThumbnails'
+			class='splide w-5/6 mx-auto mt-8'>
+			<div class='splide__arrows'>
+				<button class='splide__arrow splide__arrow--prev -left-12 absolute bottom-1/2'>
+					<svg
+						xmlns='http://www.w3.org/2000/svg'
+						fill='none'
+						viewBox='0 0 24 24'
+						stroke-width='1.5'
+						stroke='currentColor'
+						class='w-8 h-8'>
+						<path
+							stroke-linecap='round'
+							stroke-linejoin='round'
+							d='M15.75 19.5L8.25 12l7.5-7.5'
+						></path>
+					</svg>
+				</button>
+				<button class='splide__arrow splide__arrow--next -right-12 absolute bottom-1/2'>
+					<svg
+						xmlns='http://www.w3.org/2000/svg'
+						fill='none'
+						viewBox='0 0 24 24'
+						stroke-width='1.5'
+						stroke='currentColor'
+						class='w-8 h-8'>
+						<path
+							stroke-linecap='round'
+							stroke-linejoin='round'
+							d='M8.25 4.5l7.5 7.5-7.5 7.5'
+						></path>
+					</svg>
+				</button>
+			</div>
+			<div class='splide__track'>
+				<ul class='splide__list'>
+					<li class='splide__slide'>
+						<img
+							src='/img/gallery-01.jpg'
+							class='rounded-[8px] w-full h-full block'
+							alt='gallery image'
+						/>
+					</li>
+					<li class='splide__slide'>
+						<img
+							src='/img/gallery-02.jpg'
+							class='rounded-[8px] w-full h-full block'
+							alt='gallery image'
+						/>
+					</li>
+					<li class='splide__slide'>
+						<img
+							src='/img/gallery-03.jpg'
+							class='rounded-[8px] w-full h-full block'
+							alt='gallery image'
+						/>
+					</li>
+					<li class='splide__slide'>
+						<img
+							src='/img/gallery-04.jpg'
+							class='rounded-[8px] w-full h-full block'
+							alt='gallery image'
+						/>
+					</li>
+					<li class='splide__slide'>
+						<img
+							src='/img/gallery-05.jpg'
+							class='rounded-[8px] w-full h-full block'
+							alt='gallery image'
+						/>
+					</li>
+					<li class='splide__slide'>
+						<img
+							src='/img/gallery-06.jpg'
+							class='rounded-[8px] w-full h-full block'
+							alt='gallery image'
+						/>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 	<div class='hidden md:grid grid-cols-2 gap-8'>
@@ -624,38 +730,125 @@
 			Consectetur ut non vitae pellentesque morbi. Tellus sem id tellus ornare mi.
 		</p>
 	</div>
-	<div class='pt-12'>
-		<div class='grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 2xl:gap-16 relative'>
-			<span class='hidden lg:block absolute bottom-28 -left-16'>
-				<svg
-					xmlns='http://www.w3.org/2000/svg'
-					fill='none'
-					viewBox='0 0 24 24'
-					stroke-width='1.5'
-					stroke='currentColor'
-					class='w-8 h-8'>
-					<path
-						stroke-linecap='round'
-						stroke-linejoin='round'
-						d='M15.75 19.5L8.25 12l7.5-7.5'
-					></path>
-				</svg>
-			</span>
-			<span class='hidden lg:block absolute bottom-28 -right-16'>
-				<svg
-					xmlns='http://www.w3.org/2000/svg'
-					fill='none'
-					viewBox='0 0 24 24'
-					stroke-width='1.5'
-					stroke='currentColor'
-					class='w-8 h-8'>
-					<path
-						stroke-linecap='round'
-						stroke-linejoin='round'
-						d='M8.25 4.5l7.5 7.5-7.5 7.5'
-					></path>
-				</svg>
-			</span>
+	<div
+		class='pt-12'
+		x-data="{
+		init() {
+			document.addEventListener('DOMContentLoaded', (event) => {
+				new Splide(this.$refs.testimonials, {
+					perPage: 3,
+					gap: '4rem',
+				}).mount()
+			})
+		},
+	}">
+		<section
+			class='splide hidden lg:block'
+			x-ref='testimonials'>
+			<div class='splide__arrows'>
+				<button class='splide__arrow splide__arrow--prev'>
+					<span class='hidden lg:block absolute bottom-28 -left-16'>
+						<svg
+							xmlns='http://www.w3.org/2000/svg'
+							fill='none'
+							viewBox='0 0 24 24'
+							stroke-width='1.5'
+							stroke='currentColor'
+							class='w-8 h-8'>
+							<path
+								stroke-linecap='round'
+								stroke-linejoin='round'
+								d='M15.75 19.5L8.25 12l7.5-7.5'
+							></path>
+						</svg>
+					</span>
+				</button>
+				<button class='splide__arrow splide__arrow--next'>
+					<span class='hidden lg:block absolute bottom-28 -right-16'>
+						<svg
+							xmlns='http://www.w3.org/2000/svg'
+							fill='none'
+							viewBox='0 0 24 24'
+							stroke-width='1.5'
+							stroke='currentColor'
+							class='w-8 h-8'>
+							<path
+								stroke-linecap='round'
+								stroke-linejoin='round'
+								d='M8.25 4.5l7.5 7.5-7.5 7.5'
+							></path>
+						</svg>
+					</span>
+				</button>
+			</div>
+			<div class='splide__track'>
+				<ul class='splide__list'>
+					<li class='splide__slide'>
+						<div class='text-center border-b lg:border-0 border-brand-yellow-100 pb-6'>
+							<span class='text-brand-yellow-100 uppercase font-bold text-xl pb-4 block'>Dennis Callis</span>
+							<p class='text-brand-gray-500'>
+								Lorem ipsum dolor sit amet consectetur. Accumsan feugiat neque ultrices suspendisse. Blandit turpis hac
+								sagittis ultrices aliquet id lacus eu. Lectus sapien non elementum facilisi. Ut turpis laoreet orci nibh
+								vitae vulputate at est odio. Morbi tellus magna nisl in duis. Lectus tristique imperdiet viverra nulla
+								metus.
+							</p>
+						</div>
+					</li>
+					<li class='splide__slide'>
+						<div class='text-center border-b lg:border-0 border-brand-green-400 pb-6'>
+							<span class='text-brand-green-400 uppercase font-bold text-xl pb-4 block'>Stephanie Nicol</span>
+							<p class='text-brand-gray-500'>
+								Lectus tristique imperdiet viverra nulla metus. Accumsan feugiat neque ultrices suspendisse. Blandit
+								turpis hac sagittis ultrices aliquet id lacus eu. Lectus sapien non elementum facilisi. Ut turpis
+								laoreet orci nibh vitae vulputate at est odio. Morbi tellus magna nisl in duis.
+							</p>
+						</div>
+					</li>
+					<li class='splide__slide'>
+						<div class='text-center border-b lg:border-0 border-brand-blue-200 pb-6'>
+							<span class='text-brand-blue-200 uppercase font-bold text-xl pb-4 block'>Chris Glasser</span>
+							<p class='text-brand-gray-500'>
+								Accumsan feugiat neque ultrices suspendisse. Blandit turpis hac sagittis ultrices aliquet id lacus eu.
+								Lectus sapien non elementum facilisi. Ut turpis laoreet orci nibh vitae vulputate at est odio. Morbi
+								tellus magna nisl in duis.
+							</p>
+						</div>
+					</li>
+					<li class='splide__slide'>
+						<div class='text-center border-b lg:border-0 border-brand-yellow-100 pb-6'>
+							<span class='text-brand-yellow-100 uppercase font-bold text-xl pb-4 block'>Dennis Callis</span>
+							<p class='text-brand-gray-500'>
+								Lorem ipsum dolor sit amet consectetur. Accumsan feugiat neque ultrices suspendisse. Blandit turpis hac
+								sagittis ultrices aliquet id lacus eu. Lectus sapien non elementum facilisi. Ut turpis laoreet orci nibh
+								vitae vulputate at est odio. Morbi tellus magna nisl in duis. Lectus tristique imperdiet viverra nulla
+								metus.
+							</p>
+						</div>
+					</li>
+					<li class='splide__slide'>
+						<div class='text-center border-b lg:border-0 border-brand-green-400 pb-6'>
+							<span class='text-brand-green-400 uppercase font-bold text-xl pb-4 block'>Stephanie Nicol</span>
+							<p class='text-brand-gray-500'>
+								Lectus tristique imperdiet viverra nulla metus. Accumsan feugiat neque ultrices suspendisse. Blandit
+								turpis hac sagittis ultrices aliquet id lacus eu. Lectus sapien non elementum facilisi. Ut turpis
+								laoreet orci nibh vitae vulputate at est odio. Morbi tellus magna nisl in duis.
+							</p>
+						</div>
+					</li>
+					<li class='splide__slide'>
+						<div class='text-center border-b lg:border-0 border-brand-blue-200 pb-6'>
+							<span class='text-brand-blue-200 uppercase font-bold text-xl pb-4 block'>Chris Glasser</span>
+							<p class='text-brand-gray-500'>
+								Accumsan feugiat neque ultrices suspendisse. Blandit turpis hac sagittis ultrices aliquet id lacus eu.
+								Lectus sapien non elementum facilisi. Ut turpis laoreet orci nibh vitae vulputate at est odio. Morbi
+								tellus magna nisl in duis.
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<div class='grid lg:hidden gap-6 lg:gap-8 2xl:gap-16 relative'>
 			<div class='text-center border-b lg:border-0 border-brand-yellow-100 pb-6'>
 				<span class='text-brand-yellow-100 uppercase font-bold text-xl pb-4 block'>Dennis Callis</span>
 				<p class='text-brand-gray-500'>
@@ -684,9 +877,9 @@
 		<span class='flex lg:hidden justify-center mt-8'>
 			<a
 				href='/'
-				class='font-bold text-brand-gray-500 bg-brand-blue-75 rounded-full px-4 py-2'
-				>Voir tous</a
-			>
+				class='font-bold text-brand-gray-500 bg-brand-blue-75 rounded-full px-4 py-2'>
+				Voir tous
+			</a>
 		</span>
 	</div>
 </div>
