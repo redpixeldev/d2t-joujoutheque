@@ -8,9 +8,47 @@
     },
 		{
       image: '/img/team-member-photo.png',
-      name: 'Isabelle Tremblay',
-      position: 'Directrice',
+      name: 'Jeannine Maltais-Dumouchel',
+      position: 'Coordonnatrice des activités',
 			description: 'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
+    },
+		{
+      image: '/img/team-member-photo.png',
+      name: 'Wismy Noster',
+      position: 'Agent de mobilisation et liaison',
+			description: 'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
+    },
+		{
+      image: '/img/team-member-photo.png',
+      name: 'Mariana Infante',
+      position: 'Agente de milieu',
+			description: 'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
+    },
+  ];
+	const directorsBoard = [
+    {
+      name: 'Lise Noël',
+      position: 'Présidente',
+			email: 'lise_noel@youyoutheque.com',
+			description: 'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac ultrices ullamcorper  assa potenti ornare tortor elementum sapien viverra',
+    },
+		{
+      name: 'Valérie Arsenault',
+      position: 'Vice-Présidente',
+			email: 'valerie_arsenault@youyoutheque.com',
+			description: 'Lorem ipsum dolor sit amet consectetur. Elementum nullam augue amet at volutpat commodo et lacus. Morbi netus nibh vitae facilisis eu facilisis. Massa potenti ornare tortor elementum sapien viverra lectus lacinia.',
+    },
+		{
+      name: 'Huong Nguyen',
+      position: 'Secrétaire',
+			email: 'huong_nguyen@youyoutheque.com',
+			description: 'Lorem ipsum dolor sit amet consectetur. At sit aenean lorem elit ut ac massa potenti ornare tortor elementum sapien viverraultrices ullamcorper.',
+    },
+		{
+      name: 'Pascal Blanchette',
+      position: 'Trésorier',
+			email: 'pascal_blanchette@youyoutheque.com',
+			description: 'Elementum nullam augue amet at volutpat commodo et lacus. Morbi netus nibh vitae facilisis eu facilisis. Massa potenti ornare tortor elementum sapien viverra lectus lacinia.',
     },
   ];
 ---
@@ -18,7 +56,7 @@
 <div class="relative bg-brand-blue-50">
 	<img src="/img/bg-hero-decor.png" class="hidden lg:block absolute inset-x-0 xl:w-[95%] 2xl:w-5/6 mx-auto h-auto top-24 xl:top-10 object-cover z-10" alt="background decor">
 	<img src="/img/bg-hero-decor-contact-mobile.png" class="block lg:hidden absolute inset-x-0 sm:w-2/3 md:w-[45%] ml-auto md:ml-20 h-auto top-0 right-0 object-cover z-10" alt="background decor">
-	<img src="/img/hero-cloud-team-mobile.png" class="block lg:hidden absolute inset-x-0 w-full h-auto object-cover top-44 [@media(min-width:530px)_and_(max-width:639px)]:top-24 sm:top-20 md:top-24 z-0" alt="cloud image">
+	<img src="/img/hero-cloud-team-mobile.png" class="block md:hidden absolute inset-x-0 w-full h-auto object-cover top-44 [@media(min-width:530px)_and_(max-width:639px)]:top-24 sm:top-20 md:top-24 z-0" alt="cloud image">
 	<img src="/img/hero-cloud.png" class="hidden md:block absolute inset-x-0 w-full h-auto object-cover object-top bottom-0 z-0" alt="cloud image">
 	<div class="relative z-30 container lg:px-16 xl:px-32 pt-8 md:pt-12 lg:pt-16 pb-10 sm:pb-24 md:pb-44 lg:pb-56 xl:pb-[22rem] 2xl:pb-[26rem] flex flex-col md:flex-row justify-between gap-8 md:gap-0">
 		<div class="md:w-1/2 lg:w-3/5 xl:w-[45%] 2xl:w-2/5">
@@ -33,7 +71,7 @@
 	</div>
 </div>
 
-<div class="container lg:px-16 xl:px-32">
+<div class="container lg:px-16 xl:px-32 pt-11 md:pt-0 pb-14">
 	<div class='text-center'>
 		<h2 class='text-[32px]/[48px] font-bold uppercase text-brand-blue-100 space-x-2'>
 			<span class='text-[#4BBA02]'>Équipe </span>
@@ -42,14 +80,47 @@
 		</h2>
 		<span class='rounded-full w-2 h-2 bg-brand-orange-100 block mx-auto mb-8 lg:mb-12'></span>
 	</div>
-	<div class="grid grid-cols-4">
+	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
 		{teamMember.map((item, index) => {
 			return (
-				<div>
-					<span>
-						<img src={item.image} class="" alt=""></span>
+				<div class="text-center">
+					<span class="block w-36 2xl:w-44 mx-auto">
+						<img src={item.image} class="" alt={item.name}>
+					</span>
+					<span class="block mt-4 font-bold text-brand-blue-100 uppercase">{item.name}</span>
+					<span class="block mt-4">{item.position}</span>
+					<p class="mt-4 text-sm/[20px]">{item.description}</p>
 				</div>
 			);
     })}
+		<button class="mx-auto inline-block sm:hidden uppercase text-sm font-medium text-brand-gray-100 border border-brand-gray-100 rounded-full px-4 py-1">Voir Plus</button>
+	</div>
+</div>
+
+<div class="container lg:px-16 xl:px-32">
+	<div class='text-center'>
+		<h2 class='text-[32px]/[48px] font-bold uppercase text-brand-blue-100 space-x-2'>
+			<span class='text-[#4BBA02]'>Conseil </span>
+			<span class='text-brand-blue-100'>d’administration</span>
+			<span class="inline-flex">
+				<span class='text-brand-orange-100'>2022</span>
+				<span class="text-[#AAD3FF]">-</span>
+				<span class="text-[#EAD400]">2023</span>
+			</span>
+		</h2>
+		<span class='rounded-full w-2 h-2 bg-brand-orange-100 block mx-auto mb-8 lg:mb-12'></span>
+	</div>
+	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-7 md:gap-8">
+		{directorsBoard.map((item, index) => {
+			return (
+				<div class="text-center">
+					<span class="inline-block mt-4 font-bold text-brand-blue-100 uppercase py-1 px-3 bg-[#E4F1FF] rounded-full">{item.name}</span>
+					<span class="block mt-4">{item.position}</span>
+					<a href="mailto:{item.email}" class="text-brand-blue-100 underline text-sm break-words block mt-4">{item.email}</a>
+					<p class="mt-4 text-sm/[20px]">{item.description}</p>
+				</div>
+			);
+    })}
+		<button class="mx-auto inline-block sm:hidden uppercase text-sm font-medium text-brand-gray-100 border border-brand-gray-100 rounded-full px-4 py-1">Voir Plus</button>
 	</div>
 </div>
