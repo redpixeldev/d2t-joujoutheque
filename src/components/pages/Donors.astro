@@ -1,0 +1,168 @@
+---
+const donors = [
+	{
+		image: '/img/logo-montreal.png',
+		name: 'Arrondissement Villeray-St-Michel-Parc-Extension',
+		link: '/',
+	},
+	{
+		image: '/img/logo-entraide.png',
+		name: 'Centraide du Grand Montréal',
+		link: '/',
+	},
+	{
+		image: '/img/logo-desjardins.png',
+		name: 'Desjardins Centre-est de Montréal',
+		link: '/',
+	},
+	{
+		image: '/img/logo-centre-quebec.png',
+		name: 'Direction de la santé publique / CIUSSS de l’Est-de-l’île de Montréal',
+		link: '/',
+	},
+	{
+		image: '/img/logo-emplois.png',
+		name: 'Emploi d’été Canada',
+		link: '/',
+	},
+	{
+		image: '/img/logo-famille-quebec.png',
+		name: 'Desjardins Centre-est de Montréal',
+		link: '/',
+	},
+	{
+		image: '/img/logo-pere-noel.png',
+		name: 'Opération Père-Noël',
+		link: '/',
+	},
+	{
+		image: '/img/logo-office-dhabitation.png',
+		name: 'Office Municipal d’habitation de Montréal',
+		link: '/',
+	},{
+		image: '/img/logo-reseau-reussite.png',
+		name: 'www.reseaureussitemontreal.ca',
+		link: 'www.reseaureussitemontreal.ca',
+	},
+	{
+		image: '/img/logo-montreal.png',
+		name: 'Ville de Montréal',
+		link: '/',
+	},
+];
+---
+
+<div class='relative bg-brand-blue-50'>
+	<img
+		src='/img/decor-hero-donors.png'
+		class='hidden md:block absolute inset-x-0 xl:w-[95%] 2xl:w-5/6 mx-auto h-auto top-20 lg:top-14 xl:top-3 object-cover z-10'
+		alt='background decor'
+	/>
+	<img
+	src='/img/decor-hero-donors-mobile.png'
+	class='block sm:hidden [@media(min-width:450px)]:hidden absolute inset-x-0 mx-auto h-auto top-20 [@media(min-width:400px)]:top-12 object-cover z-10'
+	alt='background decor'
+/>
+	<img
+		src='/img/hero-cloud-contact-mobile.png'
+		class='block lg:hidden absolute inset-x-0 w-full h-auto object-cover object-top bottom-0 z-0'
+		alt='cloud image'
+	/>
+	<img
+		src='/img/hero-cloud.png'
+		class='hidden lg:block absolute inset-x-0 w-full h-auto object-cover object-top bottom-0 z-0'
+		alt='cloud image'
+	/>
+	<div
+		class='relative z-30 container lg:px-16 xl:px-32 pt-8 md:pt-12 lg:pt-16 pb-24 sm:pb-52 md:pb-60 lg:pb-56 xl:pb-80 2xl:pb-96'>
+		<div class=''>
+			<h1 class='text-brand-blue-100 font-bold text-[40px]/[48px] 2xl:text-5xl/[56px] pb-6 uppercase space-x-2'>
+				Partenaires <br/> <span class="text-brand-green-300"> financiers </span> <span class="text-brand-red-75"> et </span> <span class="text-brand-orange-100">donateurs</span>
+			</h1>
+			<p class='text-brand-gray-500'>
+				La Joujouthèque St-Michel est un organisme sans but lucratif dont le fonctionnement de base et les projets sont subventionnés par des donateurs gouvernementaux et privés.
+			</p>
+		</div>
+	</div>
+</div>
+<div class='mt-5 md:-mt-14 lg:mt-0 xl:-mt-10 relative container lg:px-16 xl:px-32'>
+	<img
+		src='/img/decor-donors-section.png'
+		class='hidden lg:block absolute inset-x-0 xl:w-[95%] 2xl:w-5/6 mx-auto h-auto top-20 lg:top-40 xl:top-36 2xl:top-32 object-cover z-10'
+		alt='background decor'
+	/>
+	<div class='pb-20'>
+		<div>
+			<h2 class='text-[32px]/[48px] font-bold uppercase text-brand-blue-100 text-left md:text-center space-x-2'>
+				Bailleurs <span class='text-brand-orange-100'>de fonds</span>
+				<span class='text-brand-yellow-200'>et </span>
+				<span class="text-brand-green-100">donateurs</span>
+			</h2>
+			<span class='rounded-full w-2 h-2 bg-brand-green-300 block mx-auto mb-6'></span>
+		</div>
+		<p class='text-brand-gray-500 pb-4'>
+			La Joujouthèque St-Michel a le souci de s’intégrer dans le quartier en favorisant des liens de partenariat avec différents organismes et en s’impliquant dans les différents lieux de concertation de son quartier.
+		</p>
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 md:gap-16 pt-14">
+			{
+				donors.map((item, index) => {
+					return (
+						<div class='text-center'>
+							<span class='block h-16 w-auto mx-auto'>
+								<img
+									src={item.image}
+									class='h-16 mx-auto'
+									alt={item.name}
+								/>
+							</span>
+							<a href={item.link} class="uppercase text-brand-gray-500 mt-5 inline-block underline sm:max-w-[261px] break-words">{item.name}</a>
+						</div>
+					);
+				})
+			}
+		</div>
+	</div>
+	<div class=''>
+		<div class="">
+			<div class="text-center">
+				<h2 class='text-[32px]/[48px] font-bold uppercase text-[#EAD400] md:text-brand-yellow-200 space-x-2 break-words'>
+					Nos <span class='text-brand-blue-100'>Partenaires</span>
+					<span class='text-brand-green-100'>d’actions</span>
+				</h2>
+				<span class='rounded-full w-2 h-2 bg-brand-green-300 block mx-auto mb-6'></span>
+			</div>
+			<p class='text-brand-gray-500'>
+				La Joujouthèque St-Michel a le souci de s’intégrer dans le quartier en favorisant des liens de partenariat avec différents organismes et en s’impliquant dans les différents lieux de concertation de son quartier. <br/>
+				La Joujouthèque St-Michel est membre actif de la concertation œuvrant pour la Réussite éducative des enfants et des jeunes et collabore à plusieurs projets du milieu dont les préoccupations sont axées sur le bien-être de l’enfant et de sa famille. elle est impliquée dans différents projets concertés du quartier.<br/>
+				Dans le but de bien s’ancrer au sein de son milieu, la Joujouthèque St-Michel a su s’entourer de partenaires importants:
+			</p>
+		</div>
+		<div class="2xl:w-3/4 mx-auto pt-8 md:pt-16 flex flex-col md:flex-row text-center">
+			<div class="text-center md:w-1/2 mx-auto md:mx-0 space-y-2">
+				<span class="text-brand-blue-300 uppercase block">À portée de mains</span>
+				<span class="text-brand-blue-300 uppercase block">Bibliothèque de Saint-Michel</span>
+				<span class="text-brand-blue-300 uppercase block">À portée de mains</span>
+				<span class="text-brand-blue-300 uppercase block">À portée de mains</span>
+				<span class="text-brand-blue-300 uppercase block">Bibliothèque de Saint-Michel</span>
+				<span class="text-brand-blue-300 uppercase block">Bibliothèque de Saint-Michel</span>
+				<span class="text-brand-blue-300 uppercase block">À portée de mains</span>
+			</div>
+			<div class="text-center md:w-1/2 mx-auto md:mx-0 space-y-2">
+				<span class="text-brand-blue-300 uppercase block">Accès Bénévolat</span>
+				<span class="text-brand-blue-300 uppercase block">Bibliothèque de Saint-Michel</span>
+				<span class="text-brand-blue-300 uppercase block">Accès Bénévolat</span>
+				<span class="text-brand-blue-300 uppercase block">Accès Bénévolat</span>
+				<span class="text-brand-blue-300 uppercase block">Bibliothèque de Saint-Michel</span>
+				<span class="text-brand-blue-300 uppercase block">Bibliothèque de Saint-Michel</span>
+				<span class="text-brand-blue-300 uppercase block">Accès Bénévolat</span>
+				<span class="text-brand-blue-300 uppercase block">Bibliothèque de Saint-Michel</span>
+			</div>
+		</div>
+		<div class="flex justify-center pt-7">
+			<button
+			class='mx-auto inline-block sm:hidden uppercase text-sm font-medium text-brand-gray-100 border border-brand-gray-100 rounded-full px-4 py-1'
+			>Voir Plus</button
+		>
+		</div>
+	</div>
+</div>
