@@ -1,0 +1,199 @@
+---
+
+---
+
+<div class='relative bg-brand-blue-50'>
+	<img
+		src='/img/decor-hero-donors.png'
+		class='hidden md:block absolute inset-x-0 xl:w-[95%] 2xl:w-5/6 mx-auto h-auto top-20 lg:top-14 xl:top-3 object-cover z-10'
+		alt='background decor'
+	/>
+	<img
+	src='/img/decor-hero-donors-mobile.png'
+	class='block sm:hidden [@media(min-width:450px)]:hidden absolute inset-x-0 mx-auto h-auto top-20 [@media(min-width:400px)]:top-12 object-cover z-10'
+	alt='background decor'
+/>
+	<img
+		src='/img/hero-cloud-contact-mobile.png'
+		class='block lg:hidden absolute inset-x-0 w-full h-auto object-cover object-top bottom-0 z-0'
+		alt='cloud image'
+	/>
+	<img
+		src='/img/hero-cloud.png'
+		class='hidden lg:block absolute inset-x-0 w-full h-auto object-cover object-top bottom-0 z-0'
+		alt='cloud image'
+	/>
+	<div
+		class='relative z-30 container lg:px-16 xl:px-32 pt-8 md:pt-12 lg:pt-16 pb-24 sm:pb-52 md:pb-60 lg:pb-56 xl:pb-80 2xl:pb-96'>
+		<div class=''>
+			<h1 class='text-brand-blue-100 font-bold text-[40px]/[48px] 2xl:text-5xl/[56px] pb-6 uppercase space-x-2'>
+				Partenaires <br/> <span class="text-brand-green-300"> financiers </span> <span class="text-brand-red-75"> et </span> <span class="text-brand-orange-100">donateurs</span>
+			</h1>
+			<p class='text-brand-gray-500'>
+				La Joujouthèque St-Michel est un organisme sans but lucratif dont le fonctionnement de base et les projets sont subventionnés par des donateurs gouvernementaux et privés.
+			</p>
+		</div>
+	</div>
+</div>
+<div class="bg-brand-green-50 py-8">
+	<div class="container lg:px-16 xl:px-32">
+		<div>
+			<h2 class='text-[32px]/[48px] font-bold uppercase text-brand-orange-100 text-left md:text-center space-x-2'>
+				Petit <span class='text-brand-red-75 uppercase'>RAVI</span>
+			</h2>
+			<span class='rounded-full w-2 h-2 bg-brand-blue-100 block mx-auto mb-6'></span>
+		</div>
+		<div
+		class='pt-12'
+		x-data="{
+		init() {
+			document.addEventListener('DOMContentLoaded', (event) => {
+				new Splide(this.$refs.testimonials, {
+					perPage: 3,
+					gap: '4rem',
+				}).mount()
+			})
+		},
+	}">
+		<section
+			class='splide hidden lg:block'
+			x-ref='testimonials'>
+			<div class='splide__arrows'>
+				<button class='splide__arrow splide__arrow--prev'>
+					<span class='hidden lg:block absolute bottom-28 -left-16'>
+						<svg
+							xmlns='http://www.w3.org/2000/svg'
+							fill='none'
+							viewBox='0 0 24 24'
+							stroke-width='1.5'
+							stroke='currentColor'
+							class='w-8 h-8'>
+							<path
+								stroke-linecap='round'
+								stroke-linejoin='round'
+								d='M15.75 19.5L8.25 12l7.5-7.5'
+							></path>
+						</svg>
+					</span>
+				</button>
+				<button class='splide__arrow splide__arrow--next'>
+					<span class='hidden lg:block absolute bottom-28 -right-16'>
+						<svg
+							xmlns='http://www.w3.org/2000/svg'
+							fill='none'
+							viewBox='0 0 24 24'
+							stroke-width='1.5'
+							stroke='currentColor'
+							class='w-8 h-8'>
+							<path
+								stroke-linecap='round'
+								stroke-linejoin='round'
+								d='M8.25 4.5l7.5 7.5-7.5 7.5'
+							></path>
+						</svg>
+					</span>
+				</button>
+			</div>
+			<div class='splide__track'>
+				<ul class='splide__list'>
+					<li class='splide__slide'>
+						<div class='text-center border-b lg:border-0 border-brand-yellow-100 pb-6'>
+							<span class='text-brand-yellow-100 uppercase font-bold text-xl pb-4 block'>Dennis Callis</span>
+							<p class='text-brand-gray-500'>
+								Lorem ipsum dolor sit amet consectetur. Accumsan feugiat neque ultrices suspendisse. Blandit turpis hac
+								sagittis ultrices aliquet id lacus eu. Lectus sapien non elementum facilisi. Ut turpis laoreet orci nibh
+								vitae vulputate at est odio. Morbi tellus magna nisl in duis. Lectus tristique imperdiet viverra nulla
+								metus.
+							</p>
+						</div>
+					</li>
+					<li class='splide__slide'>
+						<div class='text-center border-b lg:border-0 border-brand-green-400 pb-6'>
+							<span class='text-brand-green-400 uppercase font-bold text-xl pb-4 block'>Stephanie Nicol</span>
+							<p class='text-brand-gray-500'>
+								Lectus tristique imperdiet viverra nulla metus. Accumsan feugiat neque ultrices suspendisse. Blandit
+								turpis hac sagittis ultrices aliquet id lacus eu. Lectus sapien non elementum facilisi. Ut turpis
+								laoreet orci nibh vitae vulputate at est odio. Morbi tellus magna nisl in duis.
+							</p>
+						</div>
+					</li>
+					<li class='splide__slide'>
+						<div class='text-center border-b lg:border-0 border-brand-blue-200 pb-6'>
+							<span class='text-brand-blue-200 uppercase font-bold text-xl pb-4 block'>Chris Glasser</span>
+							<p class='text-brand-gray-500'>
+								Accumsan feugiat neque ultrices suspendisse. Blandit turpis hac sagittis ultrices aliquet id lacus eu.
+								Lectus sapien non elementum facilisi. Ut turpis laoreet orci nibh vitae vulputate at est odio. Morbi
+								tellus magna nisl in duis.
+							</p>
+						</div>
+					</li>
+					<li class='splide__slide'>
+						<div class='text-center border-b lg:border-0 border-brand-yellow-100 pb-6'>
+							<span class='text-brand-yellow-100 uppercase font-bold text-xl pb-4 block'>Dennis Callis</span>
+							<p class='text-brand-gray-500'>
+								Lorem ipsum dolor sit amet consectetur. Accumsan feugiat neque ultrices suspendisse. Blandit turpis hac
+								sagittis ultrices aliquet id lacus eu. Lectus sapien non elementum facilisi. Ut turpis laoreet orci nibh
+								vitae vulputate at est odio. Morbi tellus magna nisl in duis. Lectus tristique imperdiet viverra nulla
+								metus.
+							</p>
+						</div>
+					</li>
+					<li class='splide__slide'>
+						<div class='text-center border-b lg:border-0 border-brand-green-400 pb-6'>
+							<span class='text-brand-green-400 uppercase font-bold text-xl pb-4 block'>Stephanie Nicol</span>
+							<p class='text-brand-gray-500'>
+								Lectus tristique imperdiet viverra nulla metus. Accumsan feugiat neque ultrices suspendisse. Blandit
+								turpis hac sagittis ultrices aliquet id lacus eu. Lectus sapien non elementum facilisi. Ut turpis
+								laoreet orci nibh vitae vulputate at est odio. Morbi tellus magna nisl in duis.
+							</p>
+						</div>
+					</li>
+					<li class='splide__slide'>
+						<div class='text-center border-b lg:border-0 border-brand-blue-200 pb-6'>
+							<span class='text-brand-blue-200 uppercase font-bold text-xl pb-4 block'>Chris Glasser</span>
+							<p class='text-brand-gray-500'>
+								Accumsan feugiat neque ultrices suspendisse. Blandit turpis hac sagittis ultrices aliquet id lacus eu.
+								Lectus sapien non elementum facilisi. Ut turpis laoreet orci nibh vitae vulputate at est odio. Morbi
+								tellus magna nisl in duis.
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<div class='grid lg:hidden gap-6 lg:gap-8 2xl:gap-16 relative'>
+			<div class='text-center border-b lg:border-0 border-brand-yellow-100 pb-6'>
+				<span class='text-brand-yellow-100 uppercase font-bold text-xl pb-4 block'>Dennis Callis</span>
+				<p class='text-brand-gray-500'>
+					Lorem ipsum dolor sit amet consectetur. Accumsan feugiat neque ultrices suspendisse. Blandit turpis hac
+					sagittis ultrices aliquet id lacus eu. Lectus sapien non elementum facilisi. Ut turpis laoreet orci nibh vitae
+					vulputate at est odio. Morbi tellus magna nisl in duis. Lectus tristique imperdiet viverra nulla metus.
+				</p>
+			</div>
+			<div class='text-center border-b lg:border-0 border-brand-green-400 pb-6'>
+				<span class='text-brand-green-400 uppercase font-bold text-xl pb-4 block'>Stephanie Nicol</span>
+				<p class='text-brand-gray-500'>
+					Lectus tristique imperdiet viverra nulla metus. Accumsan feugiat neque ultrices suspendisse. Blandit turpis
+					hac sagittis ultrices aliquet id lacus eu. Lectus sapien non elementum facilisi. Ut turpis laoreet orci nibh
+					vitae vulputate at est odio. Morbi tellus magna nisl in duis.
+				</p>
+			</div>
+			<div class='text-center border-b lg:border-0 border-brand-blue-200 pb-6'>
+				<span class='text-brand-blue-200 uppercase font-bold text-xl pb-4 block'>Chris Glasser</span>
+				<p class='text-brand-gray-500'>
+					Accumsan feugiat neque ultrices suspendisse. Blandit turpis hac sagittis ultrices aliquet id lacus eu. Lectus
+					sapien non elementum facilisi. Ut turpis laoreet orci nibh vitae vulputate at est odio. Morbi tellus magna
+					nisl in duis.
+				</p>
+			</div>
+		</div>
+		<span class='flex lg:hidden justify-center mt-8'>
+			<a
+				href='/'
+				class='font-bold text-brand-gray-500 bg-brand-blue-75 rounded-full px-4 py-2'>
+				Voir tous
+			</a>
+		</span>
+	</div>
+	</div>
+</div>
