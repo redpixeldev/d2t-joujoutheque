@@ -2,189 +2,196 @@
 
 ---
 
-<div class="container lg:px-16 xl:px-32 pt-12 pb-20">
-	<div class="w-2/5">
-		<h1 class='text-brand-blue-100 font-bold text-[40px]/[48px] 2xl:text-5xl/[56px] pb-6 uppercase space-x-2'>
-			Rapports<span class="text-brand-green-300"> annuels  </span>
-		</h1>
-		<span class='rounded-full w-2 h-2 bg-brand-green-300 block mx-auto mb-6'></span>
-	</div>
-	<div class="flex flex-col lg:flex-row lg:gap-8 prose max-w-none prose-p:text-brand-gray-500 pb-16">
-		<span><p>Lorem ipsum dolor sit amet consectetur. Accumsan feugiat neque ultrices suspendisse. Blandit turpis hac sagittis ultrices aliquet id lacus eu. Lectus sapien non elementum facilisi. Ut turpis laoreet orci nibh vitae vulputate at est odio. Morbi tellus magna nisl in duis. Lectus tristique imperdiet viverra nulla metus. Aenean quis odio eu et. Consectetur ut non vitae pellentesque morbi. Tellus sem id tellus ornare mi. Turpis ac dictum quis dui.</p></span>
-		<span>	<p>Lorem ipsum dolor sit amet consectetur. Accumsan feugiat neque ultrices suspendisse. Blandit turpis hac sagittis ultrices aliquet id lacus eu. Lectus sapien non elementum facilisi. Ut turpis laoreet orci nibh vitae vulputate at est odio. Morbi tellus magna nisl in duis. Lectus tristique imperdiet viverra nulla metus. Aenean quis odio eu et. Consectetur ut non vitae pellentesque morbi. Tellus sem id tellus ornare mi. Turpis ac dictum quis dui.</p></span>
-	</div>
-	<div
-		x-data="{
-			init() {
-				document.addEventListener('DOMContentLoaded', (event) => {
-					new Splide(this.$refs.testimonials, {
-						perPage: 3,
-						gap: '2rem',
-					}).mount()
-				})
-			},
-		}">
-		<section
-			class='splide hidden lg:block'
-			x-ref='testimonials'>
-			<div class='splide__arrows'>
-				<button class='splide__arrow splide__arrow--prev'>
-					<span class='hidden lg:block absolute top-1/2 -translate-y-1/2 -left-16'>
-						<svg
-							xmlns='http://www.w3.org/2000/svg'
-							fill='none'
-							viewBox='0 0 24 24'
-							stroke-width='1.5'
-							stroke='currentColor'
-							class='w-8 h-8'>
-							<path
-								stroke-linecap='round'
-								stroke-linejoin='round'
-								d='M15.75 19.5L8.25 12l7.5-7.5'
-							></path>
-						</svg>
+<div class="relative">
+	<img
+		src='/img/decor-programmation.png'
+		class='hidden xl:block absolute inset-x-0 xl:w-[95%] 2xl:w-[84%] mx-auto h-auto top-5 2xl:top-0 object-cover z-20'
+		alt='background about decor'
+	/>
+	<div class="container px-6 lg:px-16 xl:px-32 pt-12 pb-20">
+		<div class=" w-fit">
+			<h1 class='text-brand-blue-100 font-bold text-[40px]/[48px] 2xl:text-5xl/[56px] pb-6 uppercase space-x-2'>
+				Rapports<span class="text-brand-green-300"> annuels  </span>
+			</h1>
+			<span class='rounded-full w-2 h-2 bg-brand-green-300 block mx-auto mb-6'></span>
+		</div>
+		<div class="flex flex-col lg:flex-row lg:gap-8 prose max-w-none prose-p:text-brand-gray-500 pb-10 xl:pb-16">
+			<span class="lg:w-1/2"><p>Lorem ipsum dolor sit amet consectetur. Accumsan feugiat neque ultrices suspendisse. Blandit turpis hac sagittis ultrices aliquet id lacus eu. Lectus sapien non elementum facilisi. Ut turpis laoreet orci nibh vitae vulputate at est odio. Morbi tellus magna nisl in duis. Lectus tristique imperdiet viverra nulla metus. Aenean quis odio eu et. Consectetur ut non vitae pellentesque morbi. Tellus sem id tellus ornare mi. Turpis ac dictum quis dui.</p></span>
+			<span class="lg:w-1/2"><p>Lectus sapien non elementum facilisi. Ut turpis laoreet orci nibh vitae vulputate at est odio. Morbi tellus magna nisl in duis. Lectus tristique imperdiet viverra nulla metus. Aenean quis odio eu et. Consectetur ut non vitae pellentesque morbi. Tellus sem id tellus ornare mi. Turpis ac dictum quis dui.</p></span>
+		</div>
+		<div
+			x-data="{
+				init() {
+					document.addEventListener('DOMContentLoaded', (event) => {
+						new Splide(this.$refs.testimonials, {
+							perPage: 3,
+							gap: '2rem',
+						}).mount()
+					})
+				},
+			}">
+			<section
+				class='splide hidden lg:block'
+				x-ref='testimonials'>
+				<div class='splide__arrows'>
+					<button class='splide__arrow splide__arrow--prev'>
+						<span class='hidden lg:block absolute top-1/2 -translate-y-1/2 -left-16'>
+							<svg
+								xmlns='http://www.w3.org/2000/svg'
+								fill='none'
+								viewBox='0 0 24 24'
+								stroke-width='1.5'
+								stroke='currentColor'
+								class='w-8 h-8'>
+								<path
+									stroke-linecap='round'
+									stroke-linejoin='round'
+									d='M15.75 19.5L8.25 12l7.5-7.5'
+								></path>
+							</svg>
+						</span>
+					</button>
+					<button class='splide__arrow splide__arrow--next'>
+						<span class='hidden lg:block absolute top-1/2 -translate-y-1/2 -right-16'>
+							<svg
+								xmlns='http://www.w3.org/2000/svg'
+								fill='none'
+								viewBox='0 0 24 24'
+								stroke-width='1.5'
+								stroke='currentColor'
+								class='w-8 h-8'>
+								<path
+									stroke-linecap='round'
+									stroke-linejoin='round'
+									d='M8.25 4.5l7.5 7.5-7.5 7.5'
+								></path>
+							</svg>
+						</span>
+					</button>
+				</div>
+				<div class='splide__track'>
+					<ul class='splide__list'>
+						<li class='splide__slide'>
+							<div class="text-center pb-2">
+								<img src="/img/document-01.png" class="h-48 w-auto mx-auto" alt="image">
+								<span class='text-brand-gray-500 text-2xl font-medium mt-4 mb-3 uppercase block'>
+									Rapport annuel JSTM
+								</span>
+								<span class="flex justify-center gap-2 font-bold items-center text-brand-blue-100 mb-4">
+									<svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1a1 1 0 1 1 2 0v2h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2V1a1 1 0 0 1 2 0v2h4V1Zm-6 4a1 1 0 0 0 2 0h4a1 1 0 1 0 2 0h1v2h-10V5h1Zm-1 4v4h10V9h-10Z" fill="#479AF6"/></svg>
+									2022-2023
+								</span>
+								<a href="/" class="font-bold text-white bg-[#4cba01] rounded-full px-4 py-2">Télécharger</a>
+							</div>
+						</li>
+						<li class='splide__slide'>
+							<div class="text-center pb-2">
+								<img src="/img/document-02.png" class="h-48 w-auto mx-auto" alt="image">
+								<span class='text-brand-gray-500 text-2xl font-medium mt-4 mb-3 uppercase block'>
+									Rapport annuel JSTM
+								</span>
+								<span class="flex justify-center gap-2 font-bold items-center text-brand-blue-100 mb-4">
+									<svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1a1 1 0 1 1 2 0v2h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2V1a1 1 0 0 1 2 0v2h4V1Zm-6 4a1 1 0 0 0 2 0h4a1 1 0 1 0 2 0h1v2h-10V5h1Zm-1 4v4h10V9h-10Z" fill="#479AF6"/></svg>
+									2022-2023
+								</span>
+								<a href="/" class="font-bold text-white bg-[#4cba01] rounded-full px-4 py-2">Télécharger</a>
+							</div>
+						</li>
+						<li class='splide__slide'>
+							<div class="text-center pb-2">
+								<img src="/img/document-02.png" class="h-48 w-auto mx-auto" alt="image">
+								<span class='text-brand-gray-500 text-2xl font-medium mt-4 mb-3 uppercase block'>
+									Rapport annuel JSTM
+								</span>
+								<span class="flex justify-center gap-2 font-bold items-center text-brand-blue-100 mb-4">
+									<svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1a1 1 0 1 1 2 0v2h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2V1a1 1 0 0 1 2 0v2h4V1Zm-6 4a1 1 0 0 0 2 0h4a1 1 0 1 0 2 0h1v2h-10V5h1Zm-1 4v4h10V9h-10Z" fill="#479AF6"/></svg>
+									2022-2023
+								</span>
+								<a href="/" class="font-bold text-white bg-[#4cba01] rounded-full px-4 py-2">Télécharger</a>
+							</div>
+						</li>
+						<li class='splide__slide'>
+							<div class="text-center pb-2">
+								<img src="/img/document-01.png" class="h-48 w-auto mx-auto" alt="image">
+								<span class='text-brand-gray-500 text-2xl font-medium mt-4 mb-3 uppercase block'>
+									Rapport annuel JSTM
+								</span>
+								<span class="flex justify-center gap-2 font-bold items-center text-brand-blue-100 mb-4">
+						<svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1a1 1 0 1 1 2 0v2h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2V1a1 1 0 0 1 2 0v2h4V1Zm-6 4a1 1 0 0 0 2 0h4a1 1 0 1 0 2 0h1v2h-10V5h1Zm-1 4v4h10V9h-10Z" fill="#479AF6"/></svg>
+						2022-2023
 					</span>
-				</button>
-				<button class='splide__arrow splide__arrow--next'>
-					<span class='hidden lg:block absolute top-1/2 -translate-y-1/2 -right-16'>
-						<svg
-							xmlns='http://www.w3.org/2000/svg'
-							fill='none'
-							viewBox='0 0 24 24'
-							stroke-width='1.5'
-							stroke='currentColor'
-							class='w-8 h-8'>
-							<path
-								stroke-linecap='round'
-								stroke-linejoin='round'
-								d='M8.25 4.5l7.5 7.5-7.5 7.5'
-							></path>
-						</svg>
+								<a href="/" class="font-bold text-white bg-[#4cba01] rounded-full px-4 py-2">Télécharger</a>
+							</div>
+						</li>
+						<li class='splide__slide'>
+							<div class="text-center pb-2">
+								<img src="/img/document-01.png" class="h-48 w-auto mx-auto" alt="image">
+								<span class='text-brand-gray-500 text-2xl font-medium mt-4 mb-3 uppercase block'>
+									Rapport annuel JSTM
+								</span>
+								<span class="flex justify-center gap-2 font-bold items-center text-brand-blue-100 mb-4">
+						<svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1a1 1 0 1 1 2 0v2h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2V1a1 1 0 0 1 2 0v2h4V1Zm-6 4a1 1 0 0 0 2 0h4a1 1 0 1 0 2 0h1v2h-10V5h1Zm-1 4v4h10V9h-10Z" fill="#479AF6"/></svg>
+						2022-2023
 					</span>
-				</button>
-			</div>
-			<div class='splide__track'>
-				<ul class='splide__list'>
-					<li class='splide__slide'>
-						<div class="text-center pb-2">
-							<img src="/img/document-01.png" class="h-48 w-auto mx-auto" alt="image">
-							<span class='text-brand-gray-500 text-2xl font-medium mt-4 mb-3 uppercase block'>
-								Rapport annuel JSTM
-							</span>
-							<span class="flex justify-center gap-2 font-bold items-center text-brand-blue-100 mb-4">
-								<svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1a1 1 0 1 1 2 0v2h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2V1a1 1 0 0 1 2 0v2h4V1Zm-6 4a1 1 0 0 0 2 0h4a1 1 0 1 0 2 0h1v2h-10V5h1Zm-1 4v4h10V9h-10Z" fill="#479AF6"/></svg>
-								2022-2023
-							</span>
-							<a href="/" class="font-bold text-white bg-[#4cba01] rounded-full px-4 py-2">Télécharger</a>
-						</div>
-					</li>
-					<li class='splide__slide'>
-						<div class="text-center pb-2">
-							<img src="/img/document-02.png" class="h-48 w-auto mx-auto" alt="image">
-							<span class='text-brand-gray-500 text-2xl font-medium mt-4 mb-3 uppercase block'>
-								Rapport annuel JSTM
-							</span>
-							<span class="flex justify-center gap-2 font-bold items-center text-brand-blue-100 mb-4">
-								<svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1a1 1 0 1 1 2 0v2h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2V1a1 1 0 0 1 2 0v2h4V1Zm-6 4a1 1 0 0 0 2 0h4a1 1 0 1 0 2 0h1v2h-10V5h1Zm-1 4v4h10V9h-10Z" fill="#479AF6"/></svg>
-								2022-2023
-							</span>
-							<a href="/" class="font-bold text-white bg-[#4cba01] rounded-full px-4 py-2">Télécharger</a>
-						</div>
-					</li>
-					<li class='splide__slide'>
-						<div class="text-center pb-2">
-							<img src="/img/document-02.png" class="h-48 w-auto mx-auto" alt="image">
-							<span class='text-brand-gray-500 text-2xl font-medium mt-4 mb-3 uppercase block'>
-								Rapport annuel JSTM
-							</span>
-							<span class="flex justify-center gap-2 font-bold items-center text-brand-blue-100 mb-4">
-								<svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1a1 1 0 1 1 2 0v2h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2V1a1 1 0 0 1 2 0v2h4V1Zm-6 4a1 1 0 0 0 2 0h4a1 1 0 1 0 2 0h1v2h-10V5h1Zm-1 4v4h10V9h-10Z" fill="#479AF6"/></svg>
-								2022-2023
-							</span>
-							<a href="/" class="font-bold text-white bg-[#4cba01] rounded-full px-4 py-2">Télécharger</a>
-						</div>
-					</li>
-					<li class='splide__slide'>
-						<div class="text-center pb-2">
-							<img src="/img/document-01.png" class="h-48 w-auto mx-auto" alt="image">
-							<span class='text-brand-gray-500 text-2xl font-medium mt-4 mb-3 uppercase block'>
-								Rapport annuel JSTM
-							</span>
-							<span class="flex justify-center gap-2 font-bold items-center text-brand-blue-100 mb-4">
-					<svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1a1 1 0 1 1 2 0v2h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2V1a1 1 0 0 1 2 0v2h4V1Zm-6 4a1 1 0 0 0 2 0h4a1 1 0 1 0 2 0h1v2h-10V5h1Zm-1 4v4h10V9h-10Z" fill="#479AF6"/></svg>
-					2022-2023
-				</span>
-							<a href="/" class="font-bold text-white bg-[#4cba01] rounded-full px-4 py-2">Télécharger</a>
-						</div>
-					</li>
-					<li class='splide__slide'>
-						<div class="text-center pb-2">
-							<img src="/img/document-01.png" class="h-48 w-auto mx-auto" alt="image">
-							<span class='text-brand-gray-500 text-2xl font-medium mt-4 mb-3 uppercase block'>
-								Rapport annuel JSTM
-							</span>
-							<span class="flex justify-center gap-2 font-bold items-center text-brand-blue-100 mb-4">
-					<svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1a1 1 0 1 1 2 0v2h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2V1a1 1 0 0 1 2 0v2h4V1Zm-6 4a1 1 0 0 0 2 0h4a1 1 0 1 0 2 0h1v2h-10V5h1Zm-1 4v4h10V9h-10Z" fill="#479AF6"/></svg>
-					2022-2023
-				</span>
-							<a href="/" class="font-bold text-white bg-[#4cba01] rounded-full px-4 py-2">Télécharger</a>
-						</div>
-					</li>
-					<li class='splide__slide'>
-						<div class="text-center pb-2">
-							<img src="/img/document-02.png" class="h-48 w-auto mx-auto" alt="image">
-							<span class='text-brand-gray-500 text-2xl font-medium mt-4 mb-3 uppercase block'>
-								Rapport annuel JSTM
-							</span>
-							<span class="flex justify-center gap-2 font-bold items-center text-brand-blue-100 mb-4">
-					<svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1a1 1 0 1 1 2 0v2h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2V1a1 1 0 0 1 2 0v2h4V1Zm-6 4a1 1 0 0 0 2 0h4a1 1 0 1 0 2 0h1v2h-10V5h1Zm-1 4v4h10V9h-10Z" fill="#479AF6"/></svg>
-					2022-2023
-				</span>
-							<a href="/" class="font-bold text-white bg-[#4cba01] rounded-full px-4 py-2">Télécharger</a>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</section>
-		<div class='grid lg:hidden gap-6 lg:gap-8 2xl:gap-16 relative justify-center'>
-			<div class="text-center">
-				<img src="/img/document-01.png" class="h-48 w-auto mx-auto" alt="image">
-				<span class='text-brand-gray-500 text-2xl font-medium mt-4 mb-3 uppercase block'>
-					Rapport annuel JSTM
-				</span>
-				<span class="flex justify-center gap-2 font-bold items-center text-brand-blue-100 mb-4">
-					<svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1a1 1 0 1 1 2 0v2h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2V1a1 1 0 0 1 2 0v2h4V1Zm-6 4a1 1 0 0 0 2 0h4a1 1 0 1 0 2 0h1v2h-10V5h1Zm-1 4v4h10V9h-10Z" fill="#479AF6"/></svg>
-					2022-2023
-				</span>
-				<a href="/" class="font-bold text-white bg-[#4cba01] rounded-full px-4 py-2">Télécharger</a>
-			</div>
-			<div class="text-center">
-				<img src="/img/document-02.png" class="h-48 w-auto mx-auto" alt="image">
-				<span class='text-brand-gray-500 text-2xl font-medium mt-4 mb-3 uppercase block'>
-					Rapport annuel JSTM
-				</span>
-				<span class="flex justify-center gap-2 font-bold items-center text-brand-blue-100 mb-4">
-					<svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1a1 1 0 1 1 2 0v2h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2V1a1 1 0 0 1 2 0v2h4V1Zm-6 4a1 1 0 0 0 2 0h4a1 1 0 1 0 2 0h1v2h-10V5h1Zm-1 4v4h10V9h-10Z" fill="#479AF6"/></svg>
-					2022-2023
-				</span>
-				<a href="/" class="font-bold text-white bg-[#4cba01] rounded-full px-4 py-2">Télécharger</a>
-			</div>
-			<div class="text-center">
-				<img src="/img/document-02.png" class="h-48 w-auto mx-auto" alt="image">
-				<span class='text-brand-gray-500 text-2xl font-medium mt-4 mb-3 uppercase block'>
-					Rapport annuel JSTM
-				</span>
-				<span class="flex justify-center gap-2 font-bold items-center text-brand-blue-100 mb-4">
-					<svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1a1 1 0 1 1 2 0v2h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2V1a1 1 0 0 1 2 0v2h4V1Zm-6 4a1 1 0 0 0 2 0h4a1 1 0 1 0 2 0h1v2h-10V5h1Zm-1 4v4h10V9h-10Z" fill="#479AF6"/></svg>
-					2022-2023
-				</span>
-				<a href="/" class="font-bold text-white bg-[#4cba01] rounded-full px-4 py-2">Télécharger</a>
-			</div>
-			<div class="flex justify-center mt-12">
-				<button
-					class='mx-auto inline-block uppercase text-sm font-medium text-brand-gray-100 border border-brand-gray-100 rounded-full px-4 py-1'
-					>Voir Plus</button
-				>
+								<a href="/" class="font-bold text-white bg-[#4cba01] rounded-full px-4 py-2">Télécharger</a>
+							</div>
+						</li>
+						<li class='splide__slide'>
+							<div class="text-center pb-2">
+								<img src="/img/document-02.png" class="h-48 w-auto mx-auto" alt="image">
+								<span class='text-brand-gray-500 text-2xl font-medium mt-4 mb-3 uppercase block'>
+									Rapport annuel JSTM
+								</span>
+								<span class="flex justify-center gap-2 font-bold items-center text-brand-blue-100 mb-4">
+						<svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1a1 1 0 1 1 2 0v2h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2V1a1 1 0 0 1 2 0v2h4V1Zm-6 4a1 1 0 0 0 2 0h4a1 1 0 1 0 2 0h1v2h-10V5h1Zm-1 4v4h10V9h-10Z" fill="#479AF6"/></svg>
+						2022-2023
+					</span>
+								<a href="/" class="font-bold text-white bg-[#4cba01] rounded-full px-4 py-2">Télécharger</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<div class='grid lg:hidden gap-6 lg:gap-8 2xl:gap-16 relative justify-center'>
+				<div class="text-center">
+					<img src="/img/document-01.png" class="h-48 w-auto mx-auto" alt="image">
+					<span class='text-brand-gray-500 text-2xl font-medium mt-4 mb-3 uppercase block'>
+						Rapport annuel JSTM
+					</span>
+					<span class="flex justify-center gap-2 font-bold items-center text-brand-blue-100 mb-4">
+						<svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1a1 1 0 1 1 2 0v2h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2V1a1 1 0 0 1 2 0v2h4V1Zm-6 4a1 1 0 0 0 2 0h4a1 1 0 1 0 2 0h1v2h-10V5h1Zm-1 4v4h10V9h-10Z" fill="#479AF6"/></svg>
+						2022-2023
+					</span>
+					<a href="/" class="font-bold text-white bg-[#4cba01] rounded-full px-4 py-2">Télécharger</a>
+				</div>
+				<div class="text-center">
+					<img src="/img/document-02.png" class="h-48 w-auto mx-auto" alt="image">
+					<span class='text-brand-gray-500 text-2xl font-medium mt-4 mb-3 uppercase block'>
+						Rapport annuel JSTM
+					</span>
+					<span class="flex justify-center gap-2 font-bold items-center text-brand-blue-100 mb-4">
+						<svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1a1 1 0 1 1 2 0v2h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2V1a1 1 0 0 1 2 0v2h4V1Zm-6 4a1 1 0 0 0 2 0h4a1 1 0 1 0 2 0h1v2h-10V5h1Zm-1 4v4h10V9h-10Z" fill="#479AF6"/></svg>
+						2022-2023
+					</span>
+					<a href="/" class="font-bold text-white bg-[#4cba01] rounded-full px-4 py-2">Télécharger</a>
+				</div>
+				<div class="text-center">
+					<img src="/img/document-02.png" class="h-48 w-auto mx-auto" alt="image">
+					<span class='text-brand-gray-500 text-2xl font-medium mt-4 mb-3 uppercase block'>
+						Rapport annuel JSTM
+					</span>
+					<span class="flex justify-center gap-2 font-bold items-center text-brand-blue-100 mb-4">
+						<svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1a1 1 0 1 1 2 0v2h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2V1a1 1 0 0 1 2 0v2h4V1Zm-6 4a1 1 0 0 0 2 0h4a1 1 0 1 0 2 0h1v2h-10V5h1Zm-1 4v4h10V9h-10Z" fill="#479AF6"/></svg>
+						2022-2023
+					</span>
+					<a href="/" class="font-bold text-white bg-[#4cba01] rounded-full px-4 py-2">Télécharger</a>
+				</div>
+				<div class="flex justify-center mt-12">
+					<button
+						class='mx-auto inline-block uppercase text-sm font-medium text-brand-gray-100 border border-brand-gray-100 rounded-full px-4 py-1'
+						>Voir Plus</button
+					>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -251,7 +258,7 @@
 			<div class='splide__track'>
 				<ul class='splide__list'>
 					<li class='splide__slide'>
-						<div>
+						<div class="grid justify-center">
 							<img src="/img/ravi-03.png" class="h-[26rem] w-auto" alt="image">
 							<span class='text-brand-gray-500 gap-2 flex text-2xl font-medium items-center mt-6'>
 								<svg
@@ -269,8 +276,26 @@
 						</div>
 					</li>
 					<li class='splide__slide'>
-						<div>
-							<img src="/img/ravi-01.png" class="h-[26rem] w-auto" alt="image">
+						<div class="grid justify-center">
+							<img src="/img/ravi-01.png" class="lg:h-[25rem] xl:h-[26rem] w-auto" alt="image">
+							<span class='text-brand-gray-500 gap-2 flex text-2xl font-medium items-center mt-6'>
+								<svg
+									width='20'
+									height='20'
+									fill='none'
+									xmlns='http://www.w3.org/2000/svg'
+									><path
+										d='M2 16.142h9a1.5 1.5 0 0 1 .204 2.987l-.204.013H2a1.5 1.5 0 0 1-.204-2.986L2 16.142ZM4.94 4.584a1.5 1.5 0 0 1 1.952-.145l.169.145 7 7a1.5 1.5 0 0 1-1.953 2.267l-.169-.145-7-7a1.5 1.5 0 0 1 0-2.122ZM18 .145a1.5 1.5 0 0 1 1.486 1.296l.014.204v9a1.5 1.5 0 0 1-2.986.204l-.014-.204v-9a1.5 1.5 0 0 1 1.5-1.5Z'
+										fill='#181818'
+									></path></svg
+								>
+								2022
+							</span>
+						</div>
+					</li>
+					<li class='splide__slide'>
+						<div class="grid justify-center">
+							<img src="/img/ravi-02.png" class="lg:h-[25rem] xl:h-[26rem] w-auto" alt="image">
 							<span class='text-brand-gray-500 gap-2 flex text-2xl font-medium items-center mt-6'>
 								<svg
 									width='20'
@@ -288,7 +313,7 @@
 					</li>
 					<li class='splide__slide'>
 						<div>
-							<img src="/img/ravi-02.png" class="h-[26rem] w-auto" alt="image">
+							<img src="/img/ravi-03.png" class="lg:h-[25rem] xl:h-[26rem] w-auto" alt="image">
 							<span class='text-brand-gray-500 gap-2 flex text-2xl font-medium items-center mt-6'>
 								<svg
 									width='20'
@@ -306,7 +331,7 @@
 					</li>
 					<li class='splide__slide'>
 						<div>
-							<img src="/img/ravi-03.png" class="h-[26rem] w-auto" alt="image">
+							<img src="/img/ravi-01.png" class="lg:h-[25rem] xl:h-[26rem] w-auto" alt="image">
 							<span class='text-brand-gray-500 gap-2 flex text-2xl font-medium items-center mt-6'>
 								<svg
 									width='20'
@@ -324,25 +349,7 @@
 					</li>
 					<li class='splide__slide'>
 						<div>
-							<img src="/img/ravi-01.png" class="h-[26rem] w-auto" alt="image">
-							<span class='text-brand-gray-500 gap-2 flex text-2xl font-medium items-center mt-6'>
-								<svg
-									width='20'
-									height='20'
-									fill='none'
-									xmlns='http://www.w3.org/2000/svg'
-									><path
-										d='M2 16.142h9a1.5 1.5 0 0 1 .204 2.987l-.204.013H2a1.5 1.5 0 0 1-.204-2.986L2 16.142ZM4.94 4.584a1.5 1.5 0 0 1 1.952-.145l.169.145 7 7a1.5 1.5 0 0 1-1.953 2.267l-.169-.145-7-7a1.5 1.5 0 0 1 0-2.122ZM18 .145a1.5 1.5 0 0 1 1.486 1.296l.014.204v9a1.5 1.5 0 0 1-2.986.204l-.014-.204v-9a1.5 1.5 0 0 1 1.5-1.5Z'
-										fill='#181818'
-									></path></svg
-								>
-								2022
-							</span>
-						</div>
-					</li>
-					<li class='splide__slide'>
-						<div>
-							<img src="/img/ravi-02.png" class="h-[26rem] w-auto" alt="image">
+							<img src="/img/ravi-02.png" class="lg:h-[25rem] xl:h-[26rem] w-auto" alt="image">
 							<span class='text-brand-gray-500 gap-2 flex text-2xl font-medium items-center mt-6'>
 								<svg
 									width='20'
