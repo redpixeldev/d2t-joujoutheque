@@ -2,7 +2,7 @@
 import FormLayout from '@partials/FormLayout.astro';
 ---
 
-<FormLayout contentHasBgColor>
+<FormLayout hideSidebarOnMobile>
 	<div slot='sidebar'>
 		<h2 class='text-white text-[32px]/[48px] font-bold uppercase'>
 			Bienvenue <br class='block sm:hidden lg:block' /> dans notre communauté!
@@ -18,25 +18,91 @@ import FormLayout from '@partials/FormLayout.astro';
 	</div>
 
 	<div slot='content'>
-		<div class='max-w-sm'>
-			<h1 class='text-brand-blue-300 text-[32px]/[38px] uppercase tracking-[-0.6px] font-bold'>Connexion</h1>
-			<p class='mt-8 text-base/[23px] text-brand-gray-500'>
-				Veuillez saisir vos informations pour pouvoir utiliser tous nos services.
-			</p>
-			<a
-				href=''
-				class='mt-8 text-base/[23px] text-brand-blue-300 underline font-medium inline-block'>
-				Mot de passe oublié ?
-			</a>
-
-			<div class='mt-8'>
-				<button
-					class='py-2 bg-brand-blue-100 text-white rounded-full inline-block px-3 font-semibold text-base/[23.2px]'>
-					Connexion
-				</button>
+		<div class='max-w-sm mx-auto lg:mx-0'>
+			<div class='text-center lg:text-left'>
+				<h1 class='text-brand-blue-300 text-[32px]/[38px] uppercase tracking-[-0.6px] font-bold'>Connexion</h1>
+				<p class='mt-4 lg:mt-8 text-base/[23px] text-brand-gray-500'>
+					Veuillez saisir vos informations pour pouvoir utiliser tous nos services.
+				</p>
 			</div>
+			<form
+				action=''
+				class='mt-8 space-y-4'>
+				<div>
+					<label
+						for='form-email'
+						class='text-base/[23px] font-medium text-gray-900'>
+						Courriel
+					</label>
+					<div class='relative'>
+						<input
+							type='email'
+							class='form-input pr-12'
+							name='email'
+							id='form-email'
+							value='nom@gmail.com'
+						/>
+						<svg
+							width='20'
+							height='16'
+							viewBox='0 0 20 16'
+							fill='none'
+							xmlns='http://www.w3.org/2000/svg'
+							class='absolute right-4 top-1/2 -translate-y-1/2'>
+							<path
+								fill-rule='evenodd'
+								clip-rule='evenodd'
+								d='M15.8332 15.5C17.6742 15.5 19.1666 14.0076 19.1666 12.1667V4.68557C19.1669 4.67283 19.1669 4.66005 19.1666 4.64725V3.83333C19.1666 1.99238 17.6742 0.5 15.8332 0.5H4.16656C2.32561 0.5 0.833229 1.99238 0.833229 3.83333V4.64726C0.832933 4.66005 0.832935 4.67282 0.833229 4.68556V12.1667C0.833229 14.0076 2.32561 15.5 4.16656 15.5H15.8332ZM2.4999 12.1667C2.4999 13.0871 3.24609 13.8333 4.16656 13.8333H15.8332C16.7537 13.8333 17.4999 13.0871 17.4999 12.1667V5.89753L11.2379 8.40234C10.4432 8.72022 9.55663 8.72022 8.76193 8.40234L2.4999 5.89753V12.1667ZM10.6189 6.85488L17.4999 4.10247V3.83333C17.4999 2.91286 16.7537 2.16667 15.8332 2.16667H4.16656C3.24609 2.16667 2.4999 2.91286 2.4999 3.83333V4.10247L9.38091 6.85488C9.77826 7.01382 10.2215 7.01382 10.6189 6.85488Z'
+								fill='#667185'
+							></path>
+						</svg>
+					</div>
+				</div>
+				<div>
+					<label
+						for='form-password'
+						class='text-base/[23px] font-medium text-gray-900'>
+						Mot de passe
+					</label>
+					<div class='relative'>
+						<input
+							type='password'
+							class='form-input pr-12'
+							name='password'
+							id='form-password'
+							value='1234'
+						/>
+						<svg
+							width='16'
+							height='14'
+							viewBox='0 0 16 14'
+							fill='none'
+							xmlns='http://www.w3.org/2000/svg'
+							class='absolute right-4 top-1/2 -translate-y-1/2'>
+							<path
+								fill-rule='evenodd'
+								clip-rule='evenodd'
+								d='M13.4248 2.98744L14.7052 1.70711C15.0957 1.31658 15.0957 0.683417 14.7052 0.292893C14.3146 -0.0976311 13.6815 -0.0976311 13.2909 0.292893L1.29094 12.2929C0.900416 12.6834 0.900416 13.3166 1.29094 13.7071C1.68146 14.0976 2.31463 14.0976 2.70515 13.7071L4.28584 12.1264C5.43677 12.696 6.70803 12.9984 8.00402 13.0029C9.75128 12.9948 11.4531 12.4451 12.875 11.4297C14.297 10.4142 15.3691 8.98297 15.944 7.33295L15.9468 7.32486C15.967 7.26559 15.9816 7.20435 15.9904 7.14194C16.0124 6.98413 15.9966 6.82333 15.944 6.67291C15.4507 5.2357 14.5783 3.96345 13.4248 2.98744ZM12.0009 4.41135L9.92927 6.48299C9.97468 6.65163 9.99804 6.8264 9.99804 7.00293C9.99804 7.26556 9.94628 7.52563 9.84582 7.76831C9.7453 8.01096 9.59796 8.23141 9.41229 8.41714C9.22656 8.60284 9.00604 8.75018 8.76342 8.85068C8.52075 8.9512 8.26068 9.00293 7.99804 9.00293C7.82151 9.00293 7.64675 8.97957 7.4781 8.93416L5.80138 10.6109C6.50137 10.8668 7.24486 11 7.99902 11C9.33343 11 10.6345 10.5829 11.7201 9.80707C12.71 9.09964 13.4758 8.12619 13.9308 7.00293C13.5198 5.98828 12.8552 5.09586 12.0009 4.41135Z'
+								fill='#898D96'
+							></path>
+							<path
+								d='M7.99902 1C8.53968 1 9.07616 1.05217 9.60145 1.15426L7.74483 3.01088C6.49997 3.06034 5.29452 3.47229 4.27789 4.19879C3.28796 4.90622 2.52227 5.87967 2.06726 7.00293C2.2245 7.3911 2.41885 7.76139 2.64672 8.10898L1.21366 9.54205C0.722806 8.87106 0.330762 8.12737 0.0540115 7.33295C0.0233108 7.24506 0.00493925 7.15298 -0.000370805 7.05966C-0.00116426 7.04532 -0.00165254 7.03098 -0.00183565 7.01663C-0.00214082 6.99817 -0.00183565 6.97974 -0.00110323 6.96133L-0.000370805 6.9462C0.00493925 6.85327 0.0231888 6.76114 0.0540115 6.67291C0.622249 5.01746 1.69335 3.58087 3.11779 2.56378C4.54223 1.54672 6.24877 1 7.99902 1Z'
+								fill='#898D96'
+							></path>
+						</svg>
+					</div>
+				</div>
+				<a
+					href=''
+					class='mt-8 text-base/[23px] text-brand-blue-300 underline font-medium inline-block'>
+					Mot de passe oublié ?
+				</a>
+				<div class='!mt-8 text-center lg:text-left'>
+					<button class='btn btn-primary'> Connexion</button>
+				</div>
+			</form>
 
-			<p class='mt-8 text-base/[23px] text-brand-gray-500 font-medium'>
+			<p class='mt-8 text-base/[23px] text-brand-gray-500 font-medium text-center lg:text-left'>
 				Vous n'avez pas de compte ?
 				<a
 					href='/'

@@ -1,12 +1,16 @@
 ---
-const { contentHasBgColor } = Astro.props;
+const { hideSidebarOnMobile } = Astro.props;
 ---
 
 <div class='relative'>
 	<div class='flex lg:flex-row flex-col'>
-		<div class='w-full lg:w-[45%] bg-brand-blue-100 relative flex flex-col'>
+		<div
+			class:list={[
+				'w-full lg:w-[43%] bg-brand-blue-100 relative flex-col',
+				hideSidebarOnMobile ? 'hidden lg:flex' : 'flex',
+			]}>
 			<div
-				class='lg:ml-[calc((100vw-1024px+8rem)/2)] xl:ml-[calc((100vw-1280px+16rem)/2)] 2xl:ml-[calc((100vw-1536px+16rem)/2)] mr-16 ml-4 sm:ml-8 py-8 lg:pt-14 xl:pb-0 lg:pb-14'>
+				class='lg:ml-[calc((100vw-1024px+8rem)/2)] xl:ml-[calc((100vw-1280px+16rem)/2)] 2xl:ml-[clamp(0px,calc((100vw-1536px+16rem)/2),320px)] mr-16 ml-4 sm:ml-8 py-8 lg:pt-14 xl:pb-0 lg:pb-14'>
 				<slot name='sidebar' />
 			</div>
 			<div>
@@ -24,10 +28,7 @@ const { contentHasBgColor } = Astro.props;
 			<div class='bg-[#CDE5FF] -mt-px flex-1'></div>
 		</div>
 		<div
-			class:list={[
-				'lg:w-[55%] w-full lg:pt-14 lg:mr-[calc((100vw-1024px+8rem)/2)] xl:mr-[calc((100vw-1280px+16rem)/2)] 2xl:mr-[calc((100vw-1536px+16rem)/2)] lg:pl-16 pl-4 sm:pl-8 pb-40 pt-8',
-				{ 'bg-[#CDE5FF] lg:bg-white': contentHasBgColor },
-			]}>
+			class='lg:w-[57%] w-full lg:pt-12 lg:mr-[calc((100vw-1024px+8rem)/2)] xl:mr-[calc((100vw-1280px+16rem)/2)] 2xl:mr-[clamp(0px,calc((100vw-1536px+16rem)/2),320px)] lg:pl-16 pl-4 sm:pl-8 pb-40 pt-8 pr-4'>
 			<slot name='content' />
 		</div>
 	</div>
