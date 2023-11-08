@@ -16,9 +16,14 @@
 
 @layer components {
 	.btn {
-		@apply transition-colors duration-300 ease-linear;
+		@apply inline-block rounded-full border-2 border-transparent px-3 py-2 text-base/[23px] font-semibold transition-colors duration-300 ease-linear;
 	}
 
 	.btn-primary {
+		@apply bg-brand-blue-100 text-white;
+	}
+
+	.form-input {
+		@apply w-full rounded-md border-gray-300 bg-white py-4 text-base/[23px] font-normal text-gray-900 focus:border-transparent focus:ring-brand-blue-100;
 	}
 }
