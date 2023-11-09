@@ -15,12 +15,12 @@ import FormLayout from '@partials/FormLayout.astro';
 			<br />
 			 Venez nous rejoindre pour vivre ensemble l'expérience de la joie!
 		</p>
-		<div class="lg:hidden flex flex-col justify-center mt-10">
+		<div class="lg:hidden flex flex-col justify-center mt-10 max-w-[170px] mx-auto w-full">
 			<div class="">
-				<a href="/" class="btn btn-outline text-center mb-4">Connexion</a>
+				<a href="/" class="btn btn-outline text-center mb-4 w-full">Connexion</a>
 			</div>
 			<div class="">
-				<a href="/" class="btn btn-outline text-center">Devenir membre</a>
+				<a href="/" class="btn btn-outline text-center w-full">Devenir membre</a>
 			</div>
 		</div>
 	</div>
@@ -156,8 +156,8 @@ import FormLayout from '@partials/FormLayout.astro';
 					</label>
 					<div>
 						<input
-							type='address'
-							class='form-input pr-12'
+							type='text'
+							class='form-input pr-12 !border-[#5FC381] focus:!ring-transparent'
 							name='address'
 							id='form-address'
 							value='1184 Ste-Catherine Ouest, suite 600'
@@ -205,11 +205,12 @@ import FormLayout from '@partials/FormLayout.astro';
 					<div>
 						<input
 							type='text'
-							class='form-input pr-12'
+							class='form-input pr-12 !border-[#E26E6A] focus:!ring-transparent'
 							name='postal'
 							id='form-postal'
 							value='H3K'
 						/>
+						<span class="text-[#CB1A14] block mt-2 font-medium">Mauvais format du code postal, ex. H3B 1K1.</span>
 					</div>
 				</div>
 				<div class='!mt-8 text-center lg:text-left'>
