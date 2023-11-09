@@ -16,11 +16,15 @@
 
 @layer components {
 	.btn {
-		@apply inline-block rounded-full border-2 border-transparent px-3 py-2 text-base/[23px] font-semibold transition-colors duration-300 ease-linear;
+		@apply inline-block rounded-full border-2 border-transparent font-semibold transition-colors duration-300 ease-linear;
 	}
 
 	.btn-primary {
-		@apply bg-brand-blue-100 text-white;
+		@apply bg-brand-blue-100 text-white  px-3 py-2 text-base/[23px];
+	}
+
+	.btn-outline {
+		@apply border-white text-white uppercase py-1 px-4 text-sm;
 	}
 
 	.form-input {
