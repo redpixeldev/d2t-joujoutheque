@@ -1137,7 +1137,7 @@
 			</span>
 		</div>
 	</div>
-	<div x-data='{ isAccordionOpen: true, }'>
+	<div x-data='{ isAccordionOpen: false, }'>
 		<button
 			@click='isAccordionOpen = !isAccordionOpen'
 			class='bg-[#faf6f0] py-4 w-full'>
@@ -1429,12 +1429,15 @@
 			</span>
 		</div>
 	</div>
-	<div>
-		<div class='bg-[#faf6f0] py-4'>
+	<div x-data='{ isAccordionOpen: false, }'>
+		<button @click='isAccordionOpen = !isAccordionOpen'
+		class='bg-[#faf6f0] py-4 w-full'>
 			<div class='container'>
 				<div class='flex gap-4 justify-between'>
 					<span class='font-bold text-black uppercase'>Jeudi</span>
-					<span>
+					<span
+						class='transition-transform duration-300 ease-linear rotate-0'
+						:class="{ '!rotate-180': isAccordionOpen }">
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							fill='none'
@@ -1451,8 +1454,10 @@
 					</span>
 				</div>
 			</div>
-		</div>
-		<div class='container py-4 space-y-8'>
+		</button>
+		<div class='container py-4 space-y-8'
+		x-show='isAccordionOpen'
+		x-collapse >
 			<span class='block'>
 				<span
 					class='font-bold text-xs/[18px] text-brand-gray-500 px-2 py-1 rounded-xl bg-brand-green-50 inline-block mb-2 uppercase'
@@ -1535,12 +1540,14 @@
 			</span>
 		</div>
 	</div>
-	<div>
-		<div class='bg-[#faf6f0] py-4'>
+	<div x-data='{ isAccordionOpen: false, }'>
+		<button @click='isAccordionOpen = !isAccordionOpen'
+		class='bg-[#faf6f0] py-4 w-full'>
 			<div class='container'>
 				<div class='flex gap-4 justify-between'>
-					<span class='font-bold text-black uppercase'>Vendredi</span>
-					<span>
+					<span class="font-bold text-black uppercase">Vendredi</span>
+					<span 	class='transition-transform duration-300 ease-linear rotate-0'
+					:class="{ '!rotate-180': isAccordionOpen }">
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							fill='none'
@@ -1557,8 +1564,10 @@
 					</span>
 				</div>
 			</div>
-		</div>
-		<div class='container py-4 space-y-8'>
+		</button>
+			<div class='container py-4 space-y-8'
+		x-show='isAccordionOpen'
+		x-collapse >
 			<span class='block'>
 				<span class='text-brand-green-400 uppercase font-bold block mb-1'>prêt de jouets</span>
 				<span class='mb-2 block'>
@@ -1641,12 +1650,14 @@
 			</span>
 		</div>
 	</div>
-	<div>
-		<div class='bg-[#faf6f0] py-4'>
+	<div x-data='{ isAccordionOpen: false, }'>
+		<button @click='isAccordionOpen = !isAccordionOpen'
+		class='bg-[#faf6f0] py-4 w-full'>
 			<div class='container'>
 				<div class='flex gap-4 justify-between'>
 					<span class='font-bold text-black uppercase'>Samedi</span>
-					<span>
+					<span 	class='transition-transform duration-300 ease-linear rotate-0'
+					:class="{ '!rotate-180': isAccordionOpen }">
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							fill='none'
@@ -1663,8 +1674,10 @@
 					</span>
 				</div>
 			</div>
-		</div>
-		<div class='container py-4 space-y-8'>
+		</button>
+		<div class='container py-4 space-y-8'
+		x-show='isAccordionOpen'
+		x-collapse >
 			<span class='block'>
 				<span class='text-brand-green-400 uppercase font-bold block mb-1'>Prêt de jouets</span>
 				<span class='mb-2 block'>
