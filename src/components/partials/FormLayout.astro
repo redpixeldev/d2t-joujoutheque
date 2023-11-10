@@ -10,7 +10,7 @@ const { hideSidebarOnMobile } = Astro.props;
 				hideSidebarOnMobile ? 'hidden lg:flex' : 'flex',
 			]}>
 			<div
-				class='lg:ml-[calc((100vw-1024px+8rem)/2)] xl:ml-[calc((100vw-1280px+16rem)/2)] 2xl:ml-[clamp(0px,calc((100vw-1536px+16rem)/2),320px)] mr-16 ml-4 sm:ml-8 py-8 lg:pt-14 xl:pb-0 lg:pb-14'>
+				class='lg:ml-[calc((100vw-1024px+8rem)/2)] xl:ml-[calc((100vw-1280px+16rem)/2)] 2xl:ml-[clamp(0px,calc((100vw-1536px+16rem)/2),320px)] mr-4 sm:mr-8 lg:mr-16 ml-4 sm:ml-8 py-8 lg:pt-14 xl:pb-0 lg:pb-14'>
 				<slot name='sidebar' />
 			</div>
 			<div>
