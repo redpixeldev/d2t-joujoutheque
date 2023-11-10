@@ -15,21 +15,27 @@ import FormLayout from '@partials/FormLayout.astro';
 			<br />
 			 Venez nous rejoindre pour vivre ensemble l'expérience de la joie!
 		</p>
-		<div class="lg:hidden flex flex-col justify-center mt-10 max-w-[170px] mx-auto w-full">
-			<div class="">
-				<a href="/" class="btn btn-outline text-center mb-4 w-full">Connexion</a>
+		<div class='lg:hidden flex flex-col justify-center mt-10 max-w-[170px] mx-auto w-full'>
+			<div class=''>
+				<a
+					href='/'
+					class='btn btn-outline text-center mb-4 w-full'
+					>Connexion</a
+				>
 			</div>
-			<div class="">
-				<a href="/" class="btn btn-outline text-center w-full">Devenir membre</a>
+			<div class=''>
+				<a
+					href='/'
+					class='btn btn-outline text-center w-full'
+					>Devenir membre</a
+				>
 			</div>
 		</div>
 	</div>
 	<div slot='content'>
 		<div class=''>
 			<div class='max-w-sm lg:max-w-none mx-auto lg:mx-0'>
-				<h1 class='text-brand-blue-300 text-[32px]/[38px] uppercase tracking-[-0.6px] font-bold'>
-					Devenir membre
-				</h1>
+				<h1 class='text-brand-blue-300 text-[32px]/[38px] uppercase tracking-[-0.6px] font-bold'>Devenir membre</h1>
 				<p class='mt-4 lg:mt-8 text-base/[23px] text-brand-gray-500 max-w-lg'>
 					Veuillez saisir vos informations pour pouvoir utiliser tous nos services.
 				</p>
@@ -46,7 +52,7 @@ import FormLayout from '@partials/FormLayout.astro';
 					<div>
 						<input
 							type='text'
-							class='form-input pr-12'
+							class='form-input'
 							name='name'
 							id='form-name'
 							value='Nom'
@@ -62,7 +68,7 @@ import FormLayout from '@partials/FormLayout.astro';
 					<div>
 						<input
 							type='text'
-							class='form-input pr-12'
+							class='form-input'
 							name='prename'
 							id='form-prenom'
 							value='Prenom'
@@ -108,10 +114,10 @@ import FormLayout from '@partials/FormLayout.astro';
 					<div>
 						<input
 							type='password'
-							class='form-input pr-12'
+							class='form-input'
 							name='password'
 							id='form-password'
-							value='****'
+							value='1234'
 						/>
 					</div>
 				</div>
@@ -121,15 +127,30 @@ import FormLayout from '@partials/FormLayout.astro';
 						class='text-base/[23px] font-medium text-gray-900'>
 						Répéter le mot de passe
 					</label>
-					<div class="relative">
+					<div class='relative'>
 						<input
 							type='password'
 							class='form-input pr-12'
 							name='repeat-password'
 							id='form-repeat-password'
-							value='****'
+							value='1234'
 						/>
-						<svg class='w-4 h-4 absolute right-4 top-1/2 -translate-y-1/2' width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m13.425 3.987 1.28-1.28a1 1 0 0 0-1.414-1.414l-12 12a1 1 0 1 0 1.414 1.414l1.58-1.58c1.152.569 2.423.871 3.719.876a8.45 8.45 0 0 0 7.94-5.67l.003-.008a1 1 0 0 0-.003-.652 8.4 8.4 0 0 0-2.52-3.686ZM12 5.411 9.929 7.483a2 2 0 0 1-2.45 2.451L5.8 11.611a6.4 6.4 0 0 0 8.13-3.608A6.4 6.4 0 0 0 12 5.41Z" fill="#898D96"/><path d="M7.999 2c.54 0 1.077.052 1.602.154L7.745 4.011a6.4 6.4 0 0 0-5.678 3.992 6.4 6.4 0 0 0 .58 1.106l-1.433 1.433a8.448 8.448 0 0 1-1.16-2.209 1.002 1.002 0 0 1-.055-.372v-.015c.006-.093.024-.185.055-.273A8.4 8.4 0 0 1 7.999 2Z" fill="#898D96"/></svg>
+						<svg
+							class='w-4 h-4 absolute right-4 top-1/2 -translate-y-1/2'
+							width='16'
+							height='16'
+							fill='none'
+							xmlns='http://www.w3.org/2000/svg'
+							><path
+								fill-rule='evenodd'
+								clip-rule='evenodd'
+								d='m13.425 3.987 1.28-1.28a1 1 0 0 0-1.414-1.414l-12 12a1 1 0 1 0 1.414 1.414l1.58-1.58c1.152.569 2.423.871 3.719.876a8.45 8.45 0 0 0 7.94-5.67l.003-.008a1 1 0 0 0-.003-.652 8.4 8.4 0 0 0-2.52-3.686ZM12 5.411 9.929 7.483a2 2 0 0 1-2.45 2.451L5.8 11.611a6.4 6.4 0 0 0 8.13-3.608A6.4 6.4 0 0 0 12 5.41Z'
+								fill='#898D96'
+							></path><path
+								d='M7.999 2c.54 0 1.077.052 1.602.154L7.745 4.011a6.4 6.4 0 0 0-5.678 3.992 6.4 6.4 0 0 0 .58 1.106l-1.433 1.433a8.448 8.448 0 0 1-1.16-2.209 1.002 1.002 0 0 1-.055-.372v-.015c.006-.093.024-.185.055-.273A8.4 8.4 0 0 1 7.999 2Z'
+								fill='#898D96'
+							></path></svg
+						>
 					</div>
 				</div>
 				<div>
@@ -140,8 +161,8 @@ import FormLayout from '@partials/FormLayout.astro';
 					</label>
 					<div>
 						<input
-							type='phone'
-							class='form-input pr-12'
+							type='tel'
+							class='form-input'
 							name='phone'
 							id='form-phone'
 							value='(000) 000-00-00'
@@ -157,7 +178,7 @@ import FormLayout from '@partials/FormLayout.astro';
 					<div>
 						<input
 							type='text'
-							class='form-input pr-12 !border-[#5FC381] focus:!ring-transparent'
+							class='form-input !border-[#5FC381] focus:!ring-transparent'
 							name='address'
 							id='form-address'
 							value='1184 Ste-Catherine Ouest, suite 600'
@@ -173,7 +194,7 @@ import FormLayout from '@partials/FormLayout.astro';
 					<div>
 						<input
 							type='text'
-							class='form-input pr-12'
+							class='form-input'
 							name='city'
 							id='form-city'
 							value='Montreal'
@@ -189,7 +210,7 @@ import FormLayout from '@partials/FormLayout.astro';
 					<div>
 						<input
 							type='text'
-							class='form-input pr-12'
+							class='form-input'
 							name='province'
 							id='form-province'
 							value='QC'
@@ -205,27 +226,43 @@ import FormLayout from '@partials/FormLayout.astro';
 					<div>
 						<input
 							type='text'
-							class='form-input pr-12 !border-[#E26E6A] focus:!ring-transparent'
+							class='form-input !border-[#E26E6A] focus:!ring-transparent'
 							name='postal'
 							id='form-postal'
 							value='H3K'
 						/>
-						<span class="text-[#CB1A14] block mt-2 font-medium">Mauvais format du code postal, ex. H3B 1K1.</span>
+						<span class='text-[#CB1A14] block mt-2 font-medium'>Mauvais format du code postal, ex. H3B 1K1.</span>
 					</div>
 				</div>
 				<div class='!mt-8 text-center lg:text-left'>
 					<button class='btn btn-primary w-full lg:w-auto'>S'inscrire</button>
 				</div>
-				<div class="flex items-start mt-8">
-					<div class="flex items-center">
-						<input id="terms" type="checkbox" value="" class="mt-1 w-4 h-4 border border-gray-300 rounded focus:ring-3 focus:ring-blue-300 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required>
+				<div class='flex items-start mt-8'>
+					<div class='flex items-center'>
+						<input
+							id='terms'
+							type='checkbox'
+							value=''
+							class='mt-1 w-4 h-4 border border-gray-300 rounded focus:ring-3 focus:ring-blue-300 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800'
+							required
+						/>
 					</div>
-					<label for="terms" class="ml-3 font-medium text-brand-gray-500">J'accepte les conditions générales de Joujoutheque.</a></label>
-				</div>
-				<div class='mt-8'>
-					<span class='flex gap-3 items-center font-medium text-brand-gray-500'>Vous êtes déjà membre ? <a href="/" class="font-semibold text-brand-blue-200 underline">Connexion</a> </span>
+					<label
+						for='terms'
+						class='ml-3 font-medium text-brand-gray-500'
+						>J'accepte les conditions générales de Joujoutheque.</label
+					>
 				</div>
 			</form>
+			<div class='mt-8'>
+				<span class='flex gap-3 items-center font-medium text-brand-gray-500'
+					>Vous êtes déjà membre ? <a
+						href='/'
+						class='font-semibold text-brand-blue-200 underline'
+						>Connexion</a
+					>
+				</span>
+			</div>
 		</div>
 	</div>
 </FormLayout>
