@@ -1,0 +1,664 @@
+---
+import FormLayout from '@partials/FormLayout.astro';
+---
+
+<FormLayout>
+	<div slot='sidebar'>
+		<div class='relative w-[130px] h-[130px] mx-auto'>
+			<img
+				src='/img/member-image.png'
+				class='w-[100px] h-[100px] rounded-full border-[2.5px] border-brand-blue-75 mx-auto z-20'
+				alt='add image'
+			/>
+			<img
+				src='/img/icon-add-image.png'
+				class='w-8 h-8 rounded-full absolute bottom-[3.1rem] right-0 z-30'
+				alt='icon add image'
+			/>
+			<img
+				src='/img/round-decoration.png'
+				class='w-32 h-32 rounded-full absolute left-0 -top-3.5 z-10 mx-auto'
+				alt='round decoration'
+			/>
+		</div>
+		<div class='text-center mt-7'>
+			<span class='block text-white'>Bienvenue,</span>
+			<h6 class='text-xl text-white font-bold relative -mt-1 mb-6 uppercase'>Isabella Tremblay</h6>
+			<a
+				href='/'
+				class='font-bold text-brand-blue-200 uppercase text-xs rounded-full bg-white py-1.5 px-2 inline-flex'>
+				membre
+			</a>
+		</div>
+		<ul class='mt-12 space-y-6 max-w-[300px] mx-auto'>
+			<li class='text-white font-bold flex items-center gap-3 uppercase'>
+				<span class='h-10 w-10 flex items-center justify-center bg-brand-blue-75 rounded-full'>
+					<svg
+						class='mx-auto'
+						width='21'
+						height='21'
+						fill='none'
+						xmlns='http://www.w3.org/2000/svg'
+						><path
+							fill-rule='evenodd'
+							clip-rule='evenodd'
+							d='M10.5.5a6 6 0 1 0 0 12 6 6 0 0 0 0-12Zm-4 6a4 4 0 1 1 8 0 4 4 0 0 1-8 0Z'
+							fill='#084D9A'
+						></path><path
+							d='M5 14.5A4.5 4.5 0 0 0 .5 19v1.5h2V19A2.5 2.5 0 0 1 5 16.5h11a2.5 2.5 0 0 1 2.5 2.5v1.5h2V19a4.5 4.5 0 0 0-4.5-4.5H5Z'
+							fill='#084D9A'
+						></path></svg
+					>
+				</span>
+				 Mon profil
+			</li>
+			<li class='text-white font-medium flex items-center gap-3 uppercase'>
+				<span class='h-10 w-10 flex items-center justify-center bg-brand-blue-200 rounded-full'>
+					<svg
+						class='mx-auto'
+						width='25'
+						height='25'
+						viewBox='0 0 25 25'
+						fill='none'
+						xmlns='http://www.w3.org/2000/svg'>
+						<path
+							fill-rule='evenodd'
+							clip-rule='evenodd'
+							d='M14.8582 9.81069L12.5 5.33282L10.1418 9.81069L5.15714 10.6748L8.6831 14.3094L7.96343 19.3231L12.5 17.0883L17.0366 19.3231L16.3169 14.3094L19.8429 10.6748L14.8582 9.81069ZM23.168 9.22084C23.4847 9.27572 23.6105 9.66305 23.3867 9.89378L18.4353 14.9978L19.4465 22.0422C19.4922 22.3607 19.1626 22.6002 18.8741 22.4581L12.5 19.3181L6.12585 22.4581C5.83739 22.6002 5.50781 22.3607 5.55353 22.0422L6.5647 14.9978L1.61334 9.89378C1.38951 9.66305 1.51534 9.27572 1.83196 9.22084L8.83178 8.00744L12.1463 1.71357C12.2963 1.42881 12.7037 1.42881 12.8537 1.71357L16.1682 8.00744L23.168 9.22084Z'
+							fill='white'
+						></path>
+					</svg>
+				</span>
+				 Jouets empruntés
+			</li>
+			<li class='text-white font-medium flex items-center gap-3 uppercase'>
+				<span class='h-10 w-10 flex items-center justify-center bg-brand-blue-200 rounded-full'>
+					<svg
+						class='mx-auto'
+						width='25'
+						height='25'
+						fill='none'
+						xmlns='http://www.w3.org/2000/svg'
+						><path
+							fill-rule='evenodd'
+							clip-rule='evenodd'
+							d='M7.5 2.5a1 1 0 0 1 2 0v2h6v-2a1 1 0 1 1 2 0v2h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-18a1 1 0 0 1-1-1v-16a1 1 0 0 1 1-1h4v-2Zm8 4v2a1 1 0 1 0 2 0v-2h3v5h-16v-5h3v2a1 1 0 0 0 2 0v-2h6Zm-11 7v7h16v-7h-16Z'
+							fill='#fff'
+						></path></svg
+					>
+				</span>
+				 Activités à venir
+			</li>
+		</ul>
+	</div>
+
+	<div slot='content'>
+		<div class=''>
+			<div class='mb-8 mx-auto lg:mx-0 max-w-[560px] lg:w-full'>
+				<h1 class='text-brand-blue-300 text-[32px]/[38px] uppercase tracking-[-0.6px] font-bold'>
+					Profil <br class='block sm:hidden' /> du membre
+				</h1>
+			</div>
+			<div class='max-w-[560px] lg:w-full 2xl:max-w-[560px] space-y-8 mx-auto lg:mx-0'>
+				<div class="bg-brand-yellow-50 p-4 rounded-md border-t border-brand-yellow-warm flex gap-4">
+					<span>
+						<svg width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.751 2.5H4.25A1.249 1.249 0 0 0 3 3.749V16.25A1.249 1.249 0 0 0 4.249 17.5H16.75A1.248 1.248 0 0 0 18 16.251V3.75A1.248 1.248 0 0 0 16.751 2.5ZM9.797 5h1.406v6.25H9.797V5Zm.703 10a.938.938 0 1 1 0-1.875.938.938 0 0 1 0 1.875Z" fill="#ffb800"/></svg>
+					</span>
+					<div class="sm:w-4/5">
+						<span class="font-bold block text-sm uppercase pb-1">
+							Vous avez des changements non sauvegardés
+						</span>
+						<p class="text-sm">
+							Vous devez enregistrer vos modifications après avoir modifié votre profil.
+						</p>
+					</div>
+				</div>
+				<div class='border border-brand-blue-75 p-8 rounded-2xl'>
+					<div class='pb-8 flex gap-3 justify-between items-center'>
+						<h5 class='text-brand-blue-300 text-2xl font-bold uppercase'>Identification</h5>
+						<button>
+							<img
+								src='/img/icon-edit.png'
+								class='w-8 h-8'
+								alt='icon edit'
+							/>
+						</button>
+					</div>
+					<form
+						action=''
+						class='space-y-4'>
+						<div>
+							<label
+								for='form-name'
+								class='text-base/[23px] font-medium text-gray-900'>
+								Nom
+							</label>
+							<div>
+								<input
+									type='text'
+									class='form-input'
+									name='name'
+									id='form-name'
+									value='Nom'
+								/>
+							</div>
+						</div>
+						<div>
+							<label
+								for='form-prenom'
+								class='text-base/[23px] font-medium text-gray-900'>
+								Prénom
+							</label>
+							<div>
+								<input
+									type='text'
+									class='form-input'
+									name='prename'
+									id='form-prenom'
+									value='Prenom'
+								/>
+							</div>
+						</div>
+						<div>
+							<label
+								for='form-repeat-password'
+								class='text-base/[23px] font-medium text-gray-900'>
+								Téléphone
+							</label>
+							<div>
+								<input
+									type='tel'
+									class='form-input'
+									name='phone'
+									id='form-phone'
+									value='(000) 000-00-00'
+								/>
+							</div>
+						</div>
+						<div>
+							<label
+								for='form-address'
+								class='text-base/[23px] font-medium text-gray-900'>
+								Address
+							</label>
+							<div>
+								<input
+									type='text'
+									class='form-input !border-[#5FC381] focus:!ring-transparent'
+									name='address'
+									id='form-address'
+									value='1184 Ste-Catherine Ouest, suite 600'
+								/>
+							</div>
+						</div>
+						<div>
+							<label
+								for='form-city'
+								class='text-base/[23px] font-medium text-gray-900'>
+								Ville
+							</label>
+							<div>
+								<input
+									type='text'
+									class='form-input'
+									name='city'
+									id='form-city'
+									value='Montreal'
+								/>
+							</div>
+						</div>
+						<div>
+							<label
+								for='form-province'
+								class='text-base/[23px] font-medium text-gray-900'>
+								Province
+							</label>
+							<div>
+								<input
+									type='text'
+									class='form-input'
+									name='province'
+									id='form-province'
+									value='QC'
+								/>
+							</div>
+						</div>
+						<div>
+							<label
+								for='form-postal'
+								class='text-base/[23px] font-medium text-gray-900'>
+								Code postal
+							</label>
+							<div>
+								<input
+									type='text'
+									class='form-input !border-[#E26E6A] focus:!ring-transparent'
+									name='postal'
+									id='form-postal'
+									value='H3K'
+								/>
+								<span class='text-[#CB1A14] block mt-2 font-medium'>Mauvais format du code postal, ex. H3B 1K1.</span>
+							</div>
+						</div>
+						<div class='!mt-8 text-center lg:text-left flex justify-center'>
+							<button class='btn btn-primary w-full lg:w-auto'>Enregistrer les modifications</button>
+						</div>
+					</form>
+				</div>
+				<div class='border border-brand-blue-75 p-8 rounded-2xl'>
+					<div class='pb-6'>
+						<h5 class='text-brand-blue-300 text-2xl font-bold uppercase'>Carte de membre</h5>
+					</div>
+					<div class="pb-8 xl:pb-12 ">
+						<p class='text-brand-gray-500 font-medium text-lg'>Abonnement actif</p>
+						<span class="text-sm block">(ou à renouveler depuis X jours)</span>
+						<span class="flex gap-2 font-medium text-sm uppercase text-center mt-2">
+							<span>
+								<svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1a1 1 0 1 1 2 0v2h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2V1a1 1 0 0 1 2 0v2h4V1Zm-6 4a1 1 0 0 0 2 0h4a1 1 0 1 0 2 0h1v2h-10V5h1Zm-1 4v4h10V9h-10Z" fill="#2C76C8"/></svg>
+							</span>
+							26 sept 2023
+						</span>
+					</div>
+					<a
+						href='/'
+						class='font-semibold text-[#2C76C8] uppercase text-sm rounded-full border border-[#2C76C8] py-1.5 px-4 inline-flex gap-2'>
+						Renouveler en ligne
+					</a>
+				</div>
+				<div>
+					<div class='pb-6 flex gap-3 justify-between items-center'>
+						<h5 class='text-brand-blue-300 text-2xl font-bold uppercase'>Famille - Membre</h5>
+						<button>
+							<img
+								src='/img/icon-edit.png'
+								class='w-8 h-8'
+								alt='icon edit'
+							/>
+						</button>
+					</div>
+					<div class="mb-8">
+						<a
+						href='/'
+						class='font-semibold text-[#2C76C8] uppercase text-sm rounded-full border border-[#2C76C8] py-1.5 px-4 inline-flex items-center gap-2'>
+						<svg width="16" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 .5a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-1 3a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z" fill="#2C76C8"/><path d="M3 7.5a3 3 0 0 0-3 3v1h2v-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1h2v-1a3 3 0 0 0-3-3H3ZM13 2.5a1 1 0 0 1 1 1v1h1a1 1 0 1 1 0 2h-1v1a1 1 0 1 1-2 0v-1h-1a1 1 0 1 1 0-2h1v-1a1 1 0 0 1 1-1Z" fill="#2C76C8"/></svg>
+						Ajouter un membre
+					</a>
+					</div>
+					<div class="space-y-8">
+						<div class='border border-brand-blue-75 p-8 rounded-2xl'>
+							<div class="py-4 border-b border-brand-gray-50">
+								<span class='block text-lg font-medium text-brand-gray-500 pb-3 uppercase'>Family - membre</span>
+								<form action="" class="space-y-4">
+									<div>
+										<label
+											for='form-famille'
+											class='text-base/[23px] font-medium text-gray-900 uppercase'>
+											Famille - Membre
+										</label>
+										<div>
+											<select
+												name='famille'
+												id='famille'
+												class='form-input'>
+												<option value=''>Fils</option>
+												<option value=''>Fille</option>
+												<option value=''>Grand-fête</option>
+												<option value=''>Grand-mère</option>
+												<option value=''>Autre</option>
+											</select>
+										</div>
+									</div>
+									<div>
+										<label
+											for='form-name'
+											class='text-base/[23px] font-medium text-gray-900'>
+											Nom
+										</label>
+										<div>
+											<input
+												type='text'
+												class='form-input'
+												name='name'
+												id='form-name'
+												value='Nom'
+											/>
+										</div>
+									</div>
+									<div>
+										<label
+											for='form-prenom'
+											class='text-base/[23px] font-medium text-gray-900'>
+											Prénom
+										</label>
+										<div>
+											<input
+												type='text'
+												class='form-input'
+												name='prename'
+												id='form-prenom'
+												value='Prenom'
+											/>
+										</div>
+									</div>
+									<div>
+										<label
+											for='form-repeat-password'
+											class='text-base/[23px] font-medium text-gray-900'>
+											Téléphone
+										</label>
+										<div>
+											<input
+												type='tel'
+												class='form-input'
+												name='phone'
+												id='form-phone'
+												value='(000) 000-00-00'
+											/>
+										</div>
+									</div>
+									<div>
+										<label
+											for='form-address'
+											class='text-base/[23px] font-medium text-gray-900'>
+											Address
+										</label>
+										<div>
+											<input
+												type='text'
+												class='form-input !border-[#5FC381] focus:!ring-transparent'
+												name='address'
+												id='form-address'
+												value='1184 Ste-Catherine Ouest, suite 600'
+											/>
+										</div>
+									</div>
+									<div>
+										<label
+											for='form-city'
+											class='text-base/[23px] font-medium text-gray-900'>
+											Ville
+										</label>
+										<div>
+											<input
+												type='text'
+												class='form-input'
+												name='city'
+												id='form-city'
+												value='Montreal'
+											/>
+										</div>
+									</div>
+									<div>
+										<label
+											for='form-province'
+											class='text-base/[23px] font-medium text-gray-900'>
+											Province
+										</label>
+										<div>
+											<input
+												type='text'
+												class='form-input'
+												name='province'
+												id='form-province'
+												value='QC'
+											/>
+										</div>
+									</div>
+									<div>
+										<label
+											for='form-postal'
+											class='text-base/[23px] font-medium text-gray-900'>
+											Code postal
+										</label>
+										<div>
+											<input
+												type='text'
+												class='form-input !border-[#E26E6A] focus:!ring-transparent'
+												name='postal'
+												id='form-postal'
+												value='H3K'
+											/>
+											<span class='text-[#CB1A14] block mt-2 font-medium'>Mauvais format du code postal, ex. H3B 1K1.</span>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="pt-4">
+								<span class='block text-lg font-medium text-brand-gray-500 pb-3 uppercase'>Informations</span>
+								<form action="" class="space-y-4">
+									<div>
+										<label
+											for='form-language'
+											class='text-base/[23px] font-medium text-gray-900 uppercase'>
+											Langue familiale
+										</label>
+										<div>
+											<select
+												name='language'
+												id='language'
+												class='form-input'>
+												<option value=''>Francois</option>
+												<option value=''>Anglais</option>
+												<option value=''>Arable</option>
+												<option value=''>Espagnol</option>
+												<option value=''>Creole</option>
+												<option value=''>Autre</option>
+											</select>
+										</div>
+									</div>
+									<div>
+										<label
+											for='form-age'
+											class='text-base/[23px] font-medium text-gray-900 uppercase'>
+											Groupe l’âge
+										</label>
+										<div>
+											<select
+												name='age'
+												id='age'
+												class='form-input'>
+												<option value=''>18-34</option>
+												<option value=''>35-64</option>
+												<option value=''>65+</option>
+											</select>
+										</div>
+									</div>
+									<div>
+										<label
+											for='form-situation-familiale'
+											class='text-base/[23px] font-medium text-gray-900 uppercase'>
+											Situation familiale
+										</label>
+										<div>
+											<select
+												name='situation-familiale'
+												id='situation-familiale'
+												class='form-input'>
+												<option value=''>Avec conjoint</option>
+												<option value=''>Monoparental</option>
+												<option value=''>Arable</option>
+												<option value=''>Conjoint hors pays</option>
+												<option value=''>Solo-parental</option>
+												<option value=''>Autre</option>
+											</select>
+										</div>
+									</div>
+									<div class="flex justify-between gap-4 items-center">
+										<div class="flex flex-col sm:flex-row sm:gap-8 md:gap-10">
+											<span class="font-medium">Autorisation photo</span>
+											<span class="font-medium">Non / Oui</span>
+										</div>
+										<label class="relative inline-flex items-center cursor-pointer">
+											<input type="checkbox" value="" class="sr-only peer">
+											<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+										</label>
+									</div>
+									<div>
+										<label
+											for='form-reference'
+											class='text-base/[23px] font-medium text-gray-900 uppercase'>
+											Référence
+										</label>
+										<div>
+											<select
+												name='reference'
+												id='reference'
+												class='form-input'>
+												<option value=''>CLSC</option>
+												<option value=''>Site Internet</option>
+												<option value=''>Ami</option>
+												<option value=''>Bibliothèque</option>
+												<option value=''>Autre</option>
+											</select>
+										</div>
+									</div>
+									<div>
+										<label
+											for='form-country'
+											class='text-base/[23px] font-medium text-gray-900 uppercase'>
+											Pays d’origine
+										</label>
+										<div>
+											<select
+												name='country'
+												id='country'
+												class='form-input'>
+												<option value=''>QC</option>
+												<option value=''>Spain</option>
+												<option value=''>USA</option>
+											</select>
+										</div>
+									</div>
+									<div class="flex items-center justify-between gap-2 sm:gap-9">
+										<label for="date" class="text-base/[23px] font-medium text-gray-900">
+											Année l’arrivée au Quebec
+										</label>
+										<button class="shrink-0 inline-flex gap-2 items-center border border-brand-gray-75 px-2 py-1 rounded-md text-sm text-brand-gray-100">
+											<svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 1a1 1 0 1 1 2 0v2h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2V1a1 1 0 0 1 2 0v2h4V1ZM4 5a1 1 0 0 0 2 0h4a1 1 0 1 0 2 0h1v2H3V5h1ZM3 9v4h10V9H3Z" fill="#2C76C8"/></svg>
+											Sélectionner la date
+										</button>
+									</div>
+								</form>
+							</div>
+							<div class='!mt-8 text-center lg:text-left'>
+								<button class='btn btn-primary w-full lg:w-auto'>Enregistrer les modifications</button>
+							</div>
+						</div>
+						<div class='border border-brand-blue-75 p-8 rounded-2xl'>
+							<form
+								action=''
+								class='space-y-4'>
+								<div>
+									<label
+										for='form-name'
+										class='text-base/[23px] font-medium text-gray-900'>
+										Nom
+									</label>
+									<div>
+										<input
+											type='text'
+											class='form-input'
+											name='name'
+											id='form-name'
+											value='Nom'
+										/>
+									</div>
+								</div>
+								<div>
+									<label
+										for='form-prenom'
+										class='text-base/[23px] font-medium text-gray-900'>
+										Prénom
+									</label>
+									<div>
+										<input
+											type='text'
+											class='form-input'
+											name='prename'
+											id='form-prenom'
+											value='Prenom'
+										/>
+									</div>
+								</div>
+								<div>
+									<label
+										for='form-famille'
+										class='text-base/[23px] font-medium text-gray-900 uppercase'>
+										Famille - Membre
+									</label>
+									<div>
+										<select
+											name='famille'
+											id='famille'
+											class='form-input'>
+											<option value=''>Fils</option>
+											<option value=''>Fille</option>
+											<option value=''>Grand-fête</option>
+											<option value=''>Grand-mère</option>
+											<option value=''>Autre</option>
+										</select>
+									</div>
+								</div>
+								<div>
+									<label
+										for='form-information'
+										class='text-base/[23px] font-medium text-gray-900'>
+										Besoins particuliers
+									</label>
+									<div>
+										<textarea name="information" id="information" cols="30" rows="3" class="form-input"></textarea>
+									</div>
+								</div>
+								<div class='!mt-8 text-center lg:text-left flex justify-center'>
+									<button class='btn btn-primary w-full lg:w-auto'>Enregistrer les modifications</button>
+								</div>
+							</form>
+						</div>
+						<div class='border border-brand-blue-75 p-8 rounded-2xl'>
+							<div class='pb-6 flex gap-3 justify-between items-center'>
+								<h5 class='text-brand-blue-200 text-xl font-semibold'>Jean Franc</h5>
+								<div class="flex gap-6 items-center shrink-0">
+									<span class="bg-brand-blue-50 text-brand-blue-200 text-sm rounded-full px-3 py-0.5">
+										Grand-père
+									</span>
+									<button>
+										<img
+											src='/img/icon-edit.png'
+											class='w-8 h-8'
+											alt='icon edit'
+										/>
+									</button>
+								</div>
+							</div>
+							<div class="flex flex-col sm:flex-row gap-2 sm:gap-6">
+								<span class="uppercase text-brand-gray-500 font-semibold text-sm sm:w-1/3 block">Besoins particuliers</span>
+								<span class="uppercase text-brand-gray-500 font-medium text-sm sm:w-2/3 block">Pas d'information</span>
+							</div>
+						</div>
+						<div class='border border-brand-blue-75 p-8 rounded-2xl'>
+							<div class='pb-6 flex gap-3 justify-between items-center'>
+								<h5 class='text-brand-blue-200 text-xl font-semibold'>Rebecca Franc</h5>
+								<div class="flex gap-6 items-center shrink-0">
+									<span class="bg-brand-blue-50 text-brand-blue-200 text-sm rounded-full px-3 py-0.5">
+										Grand-mère
+									</span>
+									<button>
+										<img
+											src='/img/icon-edit.png'
+											class='w-8 h-8'
+											alt='icon edit'
+										/>
+									</button>
+								</div>
+							</div>
+							<div class="flex flex-col sm:flex-row gap-2 sm:gap-6">
+								<span class="uppercase text-brand-gray-500 font-semibold text-sm sm:w-1/3 block">Besoins particuliers</span>
+								<span class="uppercase text-brand-gray-500 font-medium text-sm sm:w-2/3 block">Pas d'information</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</FormLayout>
