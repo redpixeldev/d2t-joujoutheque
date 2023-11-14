@@ -100,6 +100,19 @@ import FormLayout from '@partials/FormLayout.astro';
 				</h1>
 			</div>
 			<div class='max-w-[560px] lg:w-full 2xl:max-w-[560px] space-y-8 mx-auto lg:mx-0'>
+				<div class="bg-[#FFE3DF] p-4 rounded-md border-t border-brand-red-75 flex gap-4">
+					<span>
+						<svg width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.751 2.5H4.25A1.249 1.249 0 0 0 3 3.749V16.25A1.249 1.249 0 0 0 4.249 17.5H16.75A1.248 1.248 0 0 0 18 16.251V3.75A1.248 1.248 0 0 0 16.751 2.5ZM9.797 5h1.406v6.25H9.797V5Zm.703 10a.938.938 0 1 1 0-1.875.938.938 0 0 1 0 1.875Z" fill="#fe452c"/></svg>
+					</span>
+					<div class="sm:w-4/5">
+						<span class="font-bold block text-sm uppercase pb-1">
+							Les modifications n'ont pas été enregistrées
+						</span>
+						<p class="text-sm">
+							Vos modifications n'ont pas été enregistrées, assurez-vous d'avoir rempli tous les champs avant d'enregistrer.
+						</p>
+					</div>
+				</div>
 				<div class='border border-brand-blue-75 p-8 rounded-2xl'>
 					<div class='pb-4 flex gap-3 justify-between items-center'>
 						<h5 class='text-brand-blue-300 text-2xl font-bold uppercase'>Sourissimots</h5>
@@ -112,8 +125,8 @@ import FormLayout from '@partials/FormLayout.astro';
 						</button>
 					</div>
 					<span class='block text-xl font-semibold text-brand-blue-200 pb-6'>Ateliers stimulation langage 3-5 ans</span>
-					<ul class='space-y-4'>
-						<li class='flex items-center gap-2 font-medium text-brand-gray-200 uppercase'>
+					<form action="" class='space-y-4'>
+						<div class='flex items-center gap-2 font-medium text-brand-gray-200 uppercase'>
 							<svg
 								class='shrink-0'
 								width='16'
@@ -131,32 +144,75 @@ import FormLayout from '@partials/FormLayout.astro';
 								></path></svg
 							>
 							OUEST
-						</li>
-						<li>
-							<span
-								class='flex items-center gap-2'>
-								<svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						</div>
+						<div>
+							<label
+								for='form-date'
+								class='text-base/[23px] font-medium text-gray-900 uppercase'>
+								Sélectionner la date
+							</label>
+							<div class="relative">
+								<select
+									name='date'
+									id='date'
+									class='form-input pl-10'>
+									<option value=''>25 sept 2023 9h30 a 11h</option>
+									<option value=''>26 sept 2023 9h30 a 11h</option>
+									<option value=''>3 OCT 2023 9h30 a 11h</option>
+									<option value=''>6 OCT 2023 9h30 a 11h</option>
+									<option value=''>12 OCT 2023 9h30 a 11h</option>
+								</select>
+								<svg class='w-4 h-4 absolute left-4 top-1/2 -translate-y-1/2' width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 1C10.5 0.447715 10.9477 0 11.5 0C12.0523 0 12.5 0.447715 12.5 1V3H14.5C15.0523 3 15.5 3.44772 15.5 4V14C15.5 14.5523 15.0523 15 14.5 15H2.5C1.94772 15 1.5 14.5523 1.5 14V4C1.5 3.44772 1.94772 3 2.5 3H4.5V1C4.5 0.447715 4.94772 0 5.5 0C6.05228 0 6.5 0.447715 6.5 1V3H10.5V1ZM4.5 5C4.5 5.55228 4.94772 6 5.5 6C6.05228 6 6.5 5.55228 6.5 5H10.5C10.5 5.55228 10.9477 6 11.5 6C12.0523 6 12.5 5.55228 12.5 5H13.5V7H3.5V5H4.5ZM3.5 9V13H13.5V9H3.5Z" fill="#2C76C8"/>
 								</svg>
-								<span class="text-brand-gray-200 uppercase break-all flex gap-1" ><span class="font-medium">25 sept 2023</span> 9h30 a 11h</span> </span>
-						</li>
-						<li class="flex gap-5 items-center w-full">
-							<span class="w-1/2 flex items-center gap-1 text-brand-gray-200 uppercase font-medium">
-								<span>
-									<svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 4a2 2 0 1 1 4 0 2 2 0 0 1-4 0Z" fill="#2C76C8"/><path d="M5 10a3.5 3.5 0 0 0-3.5 3.5V15h2v-1.5A1.5 1.5 0 0 1 5 12h7a1.5 1.5 0 0 1 1.5 1.5V15h2v-1.5A3.5 3.5 0 0 0 12 10H5Z" fill="#2C76C8"/></svg>
-								</span>
-								2 adultes
-							</span>
-							<span class='w-1/2 flex items-center gap-1 text-brand-gray-200 uppercase font-medium'>
-								<span>
-									<svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.027 3.766A5.514 5.514 0 0 0 8.77 1.994a3 3 0 1 1 1.65 4.95 5.529 5.529 0 0 0-.057-2.174 1 1 0 1 0-.334-1.004ZM12.5 10h-1.126a6.032 6.032 0 0 0-1.495-1.459c.091-.175.174-.355.246-.541H12.5a3.5 3.5 0 0 1 3.5 3.5V13h-2v-1.5a1.5 1.5 0 0 0-1.5-1.5Z" fill="#2C76C8"/><path fill-rule="evenodd" clip-rule="evenodd" d="M5 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="#2C76C8"/><path d="M3.5 10A3.5 3.5 0 0 0 0 13.5V15h2v-1.5A1.5 1.5 0 0 1 3.5 12h3A1.5 1.5 0 0 1 8 13.5V15h2v-1.5A3.5 3.5 0 0 0 6.5 10h-3Z" fill="#2C76C8"/></svg>
-								</span>
-								1 enfant
-							</span>
-						</li>
-					</ul>
+							</div>
+						</div>
+						<div class="flex gap-5 items-center w-full">
+							<div class="w-1/2">
+								<label
+									for='form-adults'
+									class='text-base/[23px] font-medium text-gray-900 uppercase'>
+									Sélectionner le nombre d'adultes
+								</label>
+								<div class="relative">
+									<select
+										name='adults'
+										id='adults'
+										class='form-input pl-10'>
+										<option value=''>1</option>
+										<option value=''>2</option>
+										<option value=''>3</option>
+										<option value=''>4</option>
+									</select>
+									<svg class='w-4 h-4 absolute left-4 top-1/2 -translate-y-1/2' width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 4a2 2 0 1 1 4 0 2 2 0 0 1-4 0Z" fill="#2C76C8"/><path d="M5 10a3.5 3.5 0 0 0-3.5 3.5V15h2v-1.5A1.5 1.5 0 0 1 5 12h7a1.5 1.5 0 0 1 1.5 1.5V15h2v-1.5A3.5 3.5 0 0 0 12 10H5Z" fill="#2C76C8"/></svg>
+								</div>
+							</div>
+							<div class="w-1/2">
+								<label
+									for='form-children'
+									class='text-base/[23px] font-medium text-gray-900 uppercase'>
+									Sélectionner le nombre d'enfants
+								</label>
+								<div class="relative">
+									<select
+										name='children'
+										id='children'
+										class='form-input pl-10'>
+										<option value=''>1</option>
+										<option value=''>2</option>
+										<option value=''>3</option>
+										<option value=''>4</option>
+									</select>
+									<svg  class='w-4 h-4 absolute left-4 top-1/2 -translate-y-1/2' width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.027 3.766A5.514 5.514 0 0 0 8.77 1.994a3 3 0 1 1 1.65 4.95 5.529 5.529 0 0 0-.057-2.174 1 1 0 1 0-.334-1.004ZM12.5 10h-1.126a6.032 6.032 0 0 0-1.495-1.459c.091-.175.174-.355.246-.541H12.5a3.5 3.5 0 0 1 3.5 3.5V13h-2v-1.5a1.5 1.5 0 0 0-1.5-1.5Z" fill="#2C76C8"/><path fill-rule="evenodd" clip-rule="evenodd" d="M5 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="#2C76C8"/><path d="M3.5 10A3.5 3.5 0 0 0 0 13.5V15h2v-1.5A1.5 1.5 0 0 1 3.5 12h3A1.5 1.5 0 0 1 8 13.5V15h2v-1.5A3.5 3.5 0 0 0 6.5 10h-3Z" fill="#2C76C8"/></svg>
+								</div>
+							</div>
+						</div>
+						<div class='!mt-6 text-center lg:text-left flex justify-center'>
+							<button class='btn btn-primary w-full lg:w-auto'>Enregistrer les modifications</button>
+						</div>
+					</form>
 				</div>
-				<div class='border border-brand-blue-75 p-8 rounded-2xl'>
+				<div class='border border-brand-blue-75 p-8 rounded-2xl opacity-40'>
 					<div class='pb-4 flex gap-3 justify-between items-center'>
 						<h5 class='text-brand-blue-300 text-2xl font-bold uppercase'>Passeport parent</h5>
 						<button>
@@ -206,7 +262,7 @@ import FormLayout from '@partials/FormLayout.astro';
 						</li>
 					</ul>
 				</div>
-				<div class='border border-brand-blue-75 p-8 rounded-2xl'>
+				<div class='border border-brand-blue-75 p-8 rounded-2xl opacity-40'>
 					<div class='pb-4 flex gap-3 justify-between items-center'>
 						<h5 class='text-brand-blue-300 text-2xl font-bold uppercase'>Formation et pret de porte-bebe</h5>
 						<button>
