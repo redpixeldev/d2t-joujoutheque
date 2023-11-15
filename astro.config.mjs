@@ -5,6 +5,7 @@ import alpinejs from '@astrojs/alpinejs';
 import tailwindcss from '@astrojs/tailwind';
 
 export default defineConfig({
+	compressHTML: false,
 	build: {
 		assets: 'assets',
 		format: 'file',
